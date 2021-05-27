@@ -1,0 +1,14 @@
+name: cryplot
+version: 0.1.0
+
+authors:
+  - Ali Naqvi <syed.alinaqvi@gmail.com>
+description: |
+  Crystal plotting library powered by gnuplot
+
+crystal: ">= 0.36.0, < 2.0.0"
+
+scripts:
+  postinstall: cd scripts && crystal run gen_palettes.cr
+
+license: MIT

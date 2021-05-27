@@ -1,0 +1,3 @@
+[submodule "deps/gnuplot-palettes"]
+	path = deps/gnuplot-palettes
+	url = https://github.com/naqvis/gnuplot-palettes
