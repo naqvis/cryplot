@@ -1,6 +1,6 @@
 # Crystal plotting library powered by `gnuplot`
 module Cryplot
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
 
   class UnkownPalette < Exception
     def initialize(name : String)

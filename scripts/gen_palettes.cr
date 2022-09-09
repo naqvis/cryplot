@@ -1,9 +1,6 @@
 require "ecr"
 require "compiler/crystal/formatter"
 
-# Download the git submodule gnuplot-palettes
-system("git submodule update --init")
-
 root = Path[__DIR__].parent
 palettes_dir = root.join("deps/gnuplot-palettes")
 
