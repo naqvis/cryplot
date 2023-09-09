@@ -4,7 +4,7 @@ set -eu
 
 PWD=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
-pushd $PWD
+pushd "$PWD"
 
 git submodule update --init
 
