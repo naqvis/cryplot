@@ -1,10 +1,8 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 set -eu
 
-PWD=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
-
-pushd "$PWD"
+cd $(dirname $0)
 
 git submodule update --init
 
@@ -15,5 +13,3 @@ then
 fi
 
 crystal run scripts/gen_palettes.cr
-
-popd
