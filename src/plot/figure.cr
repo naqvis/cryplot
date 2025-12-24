@@ -132,6 +132,8 @@ module Cryplot
       # Add output command
       Gnuplot.outputcmd(script, cleanedfilename)
 
+      Gnuplot.multiplotcmd(script, @layout_rows, @layout_cols, @title)
+
       # Add the plot commands
       @plots.each do |p|
         script << p

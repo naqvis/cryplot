@@ -739,6 +739,64 @@ module Cryplot
       draw_with_vecs("pm3d", x, y, z)
     end
 
+    # Draw a labeled heatmap from a 2D matrix with row and column labels.
+    # Useful for correlation matrices, confusion matrices, etc.
+    # matrix: 2D array where matrix[row][col] = value
+    # row_labels: labels for y-axis (rows)
+    # col_labels: labels for x-axis (columns)
+    # value_range: optional tuple {min, max} for color scale (e.g., {-1.0, 1.0} for correlation)
+    def draw_heatmap_labeled(matrix : Array(Array(Float64)), row_labels : Array(String), col_labels : Array(String), value_range : Tuple(Float64, Float64)? = nil)
+      rows = matrix.size
+      return self if rows == 0
+      cols = matrix[0].size
+      return self if cols == 0
+
+      # Build inline data block with CSV format
+      gnuplot("$heatmap_data << EOD")
+      # Header row: empty corner + column labels
+      gnuplot("," + col_labels.join(","))
+      # Data rows: row label + values
+      rows.times do |i|
+        row_data = row_labels[i] + "," + matrix[i].map { |v| v.round(3).to_s }.join(",")
+        gnuplot(row_data)
+      end
+      gnuplot("EOD")
+
+      # Configure heatmap appearance
+      gnuplot("set datafile separator comma")
+      if vr = value_range
+        gnuplot("set cbrange [#{vr[0]}:#{vr[1]}]")
+      end
+      gnuplot("unset key")
+      gnuplot("set tics scale 0")
+      gnuplot("set xtics rotate by -45")
+
+      # Use matrix plot with image
+      draw("'$heatmap_data' matrix rowheaders columnheaders", "1:2:3", "image")
+    end
+
+    # Set the color palette for heatmaps.
+    # Predefined options: :diverging (red-white-green), :sequential (white-blue), :thermal (black-red-yellow-white)
+    def heatmap_palette(style : Symbol)
+      case style
+      when :diverging
+        gnuplot("set palette defined (-1 '#d73027', 0 '#ffffbf', 1 '#1a9850')")
+      when :sequential
+        gnuplot("set palette defined (0 '#f7fbff', 1 '#08306b')")
+      when :thermal
+        gnuplot("set palette defined (0 '#000000', 0.33 '#ff0000', 0.67 '#ffff00', 1 '#ffffff')")
+      when :viridis
+        gnuplot("set palette defined (0 '#440154', 0.25 '#3b528b', 0.5 '#21918c', 0.75 '#5ec962', 1 '#fde725')")
+      end
+      self
+    end
+
+    # Set the colorbar label for heatmaps.
+    def colorbar_label(label : String)
+      gnuplot("set cblabel '#{label}'")
+      self
+    end
+
     # Draw contour lines from x, y, z data.
     def draw_contour(x : X, y : Y, z : Z) : Draw forall X, Y, Z
       gnuplot("set contour base")
@@ -897,12 +955,16 @@ module Cryplot
         script << "#==============================================================================" << Gnuplot::NEW_LINE
         script << "# PLOT COMMANDS" << Gnuplot::NEW_LINE
         script << "#==============================================================================" << Gnuplot::NEW_LINE
-        script << "plot \\\n" # use `\` to have a plot command in each individual line!
 
-        # write plot commands and style per plot
+        # Only output plot command if there are draw specs
         n = @drawspecs.size
-        0.upto(n - 1) do |i|
-          script << "    " << @drawspecs[i].repr << (i < n - 1 ? ", \\\n" : "") # consider indentation with 4 spaces!
+        if n > 0
+          script << "plot \\\n" # use `\` to have a plot command in each individual line!
+
+          # write plot commands and style per plot
+          0.upto(n - 1) do |i|
+            script << "    " << @drawspecs[i].repr << (i < n - 1 ? ", \\\n" : "") # consider indentation with 4 spaces!
+          end
         end
 
         # Add an empty line at the end
