@@ -215,7 +215,7 @@ module Cryplot
     # Note: This method leaves all other plot properties untouched.
     def clear
       @drawspecs.clear
-      @customcmdss.clear
+      @customcmds.clear
     end
 
     abstract def repr : String

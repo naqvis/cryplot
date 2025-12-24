@@ -24,6 +24,12 @@ module Cryplot
     @xtic : String = ""
     # The column in the data file containing the y tic labels.
     @ytic : String = ""
+    # The axes specification (e.g., "x1y1", "x1y2" for secondary y-axis).
+    @axes : String = ""
+    # The palette specification for color mapping.
+    @palette : String = ""
+    # Whether to use variable point size from data.
+    @variable_pointsize : Bool = false
 
     def initialize(@what, @using, @with)
       line_width(Consts::DEFAULT_LINEWIDTH)
@@ -73,6 +79,26 @@ module Cryplot
       self
     end
 
+    # Set the axes to use for this plot (e.g., "x1y1", "x1y2" for secondary y-axis).
+    def axes(spec : String)
+      @axes = spec
+      self
+    end
+
+    # Enable palette-based coloring using a data column.
+    # This is used for scatter plots with color mapping.
+    def palette_use
+      @palette = "palette"
+      self
+    end
+
+    # Enable variable point size from a data column.
+    # This is used for scatter plots with size mapping.
+    def variable_point_size
+      @variable_pointsize = true
+      self
+    end
+
     def repr : String
       u = @using
       u += ":#{@xtic}" unless @xtic.blank?
@@ -81,9 +107,28 @@ module Cryplot
         sb << @what << " "
         sb << "using #{u} " unless u.blank?
         sb << @title << " "
+        sb << "axes #{@axes} " unless @axes.blank?
         sb << "with #{@with} " unless @with.blank?
         sb << filled_curve_repr << " "
-        sb << line_repr << " "
+        # When using palette coloring, output palette instead of line_repr
+        # and skip linestyle (which includes color in gnuplot)
+        if !@palette.blank?
+          sb << "linecolor #{@palette} "
+          # Output line properties except style and color
+          sb << @line_type << " " unless @line_type.blank?
+          sb << @line_width << " " unless @line_width.blank?
+          sb << @dash_type << " " unless @dash_type.blank?
+        elsif !@line_color.blank?
+          # When user sets explicit linecolor, skip linestyle (it overrides color)
+          sb << @line_type << " " unless @line_type.blank?
+          sb << @line_width << " " unless @line_width.blank?
+          sb << @line_color << " "
+          sb << @dash_type << " " unless @dash_type.blank?
+        else
+          # Default: use full line_repr including linestyle for palette colors
+          sb << line_repr << " "
+        end
+        sb << "pointsize variable " if @variable_pointsize
         sb << point_repr << " "
         sb << fill_repr << " "
       end.squeeze(' ').strip

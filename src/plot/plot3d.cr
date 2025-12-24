@@ -214,12 +214,58 @@ module Cryplot
       draw_with_cols(name, "", [ycol])
     end
 
+    # ==================================================================================
+    # LOG SCALE CONVENIENCE METHODS
+    # ==================================================================================
+
+    # Set the x-axis to logarithmic scale.
+    def xlog(base : Int32 = 10)
+      gnuplot("set logscale x #{base}")
+      self
+    end
+
+    # Set the y-axis to logarithmic scale.
+    def ylog(base : Int32 = 10)
+      gnuplot("set logscale y #{base}")
+      self
+    end
+
+    # Set the z-axis to logarithmic scale.
+    def zlog(base : Int32 = 10)
+      gnuplot("set logscale z #{base}")
+      self
+    end
+
+    # Set all axes to logarithmic scale.
+    def xyzlog(base : Int32 = 10)
+      gnuplot("set logscale xyz #{base}")
+      self
+    end
+
+    # ==================================================================================
+    # 3D SURFACE PLOTS
+    # ==================================================================================
+
+    # Draw a 3D surface from a function string.
+    def draw_surface(func : String)
+      gnuplot("set hidden3d")
+      gnuplot("set pm3d")
+      draw(func, "", "pm3d")
+    end
+
+    # Draw a 3D surface with mesh from x, y, z data.
+    def draw_surface_mesh(x : X, y : Y, z : Z) : Draw forall X, Y, Z
+      gnuplot("set hidden3d")
+      draw_with_vecs("pm3d", x, y, z)
+    end
+
     def repr : String
       String.build do |script|
         # Add plot setup commands
         script << "#==============================================================================" << Gnuplot::NEW_LINE
         script << "# SETUP COMMANDS" << Gnuplot::NEW_LINE
         script << "#==============================================================================" << Gnuplot::NEW_LINE
+        script << "set #{title.repr} #{Gnuplot::NEW_LINE}" unless title.repr.blank?
         script << Gnuplot.command_value_str("set xrange", @xrange)
         script << Gnuplot.command_value_str("set yrange", @yrange)
         script << Gnuplot.command_value_str("set zrange", @zrange)

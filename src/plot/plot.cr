@@ -53,6 +53,12 @@ module Cryplot
     @xrange = ""
     # The y-range of the plot as a gnuplot formatted string (e.g., "set yrange [0:1]")
     @yrange = ""
+    # The y2-range of the plot as a gnuplot formatted string (e.g., "set y2range [0:1]")
+    @y2range = ""
+    # Counter for annotation labels
+    @annotation_counter = 0
+    # Counter for arrow tags
+    @arrow_counter = 0
 
     def initialize
       super
@@ -77,6 +83,7 @@ module Cryplot
       @ylabel = AxisLabel.new("y")
       @zlabel = AxisLabel.new("z")
       @rlabel = AxisLabel.new("r")
+      @y2label = AxisLabel.new("y2")
       @boxwidth = ""
 
       # Default options for fill style
@@ -102,6 +109,20 @@ module Cryplot
       @ylabel.text(label)
       @ylabel
     end
+
+    # def xrange(min : StringOrFloat, max : StringOrFloat)
+    #   vmin = case min
+    #          when String then "\"#{min}\""
+    #          when Float  then "#{min}"
+    #          end
+
+    #   vmax = case max
+    #          when String then "\"#{max}\""
+    #          when Float  then "#{max}"
+    #          end
+
+    #   @xrange = "[#{vmin}:#{vmax}]"
+    # end
 
     # Set the x-range of the plot (also possible with empty values or autoscale options (e.g. "", "*")).
     def xrange(min : StringOrFloat, max : StringOrFloat)
@@ -305,7 +326,7 @@ module Cryplot
 
     # Draw steps with given @p x and @p y vectors. Identical to @ref drawStepsChangeFirstX.
     def draw_steps(x, y)
-      draw_with_vecs_steps_change_first_x(x, y)
+      draw_steps_change_first_x(x, y)
     end
 
     # Draw steps with given @p x and @p y vectors with steps along *x* changes first.
@@ -491,6 +512,341 @@ module Cryplot
       draw_with_cols(name, "", [ycol])
     end
 
+    # ==================================================================================
+    # LOG SCALE CONVENIENCE METHODS
+    # ==================================================================================
+
+    # Set the x-axis to logarithmic scale.
+    def xlog(base : Int32 = 10)
+      gnuplot("set logscale x #{base}")
+      self
+    end
+
+    # Set the y-axis to logarithmic scale.
+    def ylog(base : Int32 = 10)
+      gnuplot("set logscale y #{base}")
+      self
+    end
+
+    # Set both x and y axes to logarithmic scale.
+    def xylog(base : Int32 = 10)
+      gnuplot("set logscale xy #{base}")
+      self
+    end
+
+    # Disable logarithmic scale on x-axis.
+    def xlog_off
+      gnuplot("unset logscale x")
+      self
+    end
+
+    # Disable logarithmic scale on y-axis.
+    def ylog_off
+      gnuplot("unset logscale y")
+      self
+    end
+
+    # ==================================================================================
+    # SECONDARY Y-AXIS SUPPORT
+    # ==================================================================================
+
+    # Set the label of the secondary y-axis (y2) and return a reference to the corresponding specs object.
+    def y2label(label : String)
+      @y2label.text(label)
+      @y2label
+    end
+
+    # Set the y2-range of the plot (also possible with empty values or autoscale options (e.g. "", "*")).
+    def y2range(min : StringOrFloat, max : StringOrFloat)
+      @y2range = "[#{min}:#{max}]"
+    end
+
+    # Enable the secondary y-axis (y2) tics.
+    def y2tics_show
+      @ytics_major_right.show
+      self
+    end
+
+    # Draw a curve with given x and y vectors on the secondary y-axis (y2).
+    def draw_curve_y2(x : X, y : Y) : Draw forall X, Y
+      draw_with_vecs("lines", x, y).axes("x1y2")
+    end
+
+    # Draw points with given x and y vectors on the secondary y-axis (y2).
+    def draw_points_y2(x : X, y : Y) : Draw forall X, Y
+      draw_with_vecs("points", x, y).axes("x1y2")
+    end
+
+    # Draw a curve with points with given x and y vectors on the secondary y-axis (y2).
+    def draw_curve_with_points_y2(x : X, y : Y) : Draw forall X, Y
+      draw_with_vecs("linespoints", x, y).axes("x1y2")
+    end
+
+    # ==================================================================================
+    # DATE/TIME AXIS SUPPORT
+    # ==================================================================================
+
+    # Set the x-axis to use time/date format.
+    # The format string uses strftime format specifiers (e.g., "%Y-%m-%d", "%H:%M:%S").
+    def xtime_format(format : String)
+      gnuplot("set xdata time")
+      gnuplot("set timefmt '#{format}'")
+      self
+    end
+
+    # Set the display format for x-axis time labels.
+    # The format string uses strftime format specifiers.
+    def xtime_display(format : String)
+      gnuplot("set format x '#{format}'")
+      self
+    end
+
+    # Set the y-axis to use time/date format.
+    def ytime_format(format : String)
+      gnuplot("set ydata time")
+      gnuplot("set timefmt '#{format}'")
+      self
+    end
+
+    # Set the display format for y-axis time labels.
+    def ytime_display(format : String)
+      gnuplot("set format y '#{format}'")
+      self
+    end
+
+    # ==================================================================================
+    # ANNOTATIONS
+    # ==================================================================================
+
+    # Add a text annotation at the specified position.
+    # Position can be in data coordinates (default), graph coordinates (0-1), or screen coordinates.
+    def annotate(x : Number, y : Number, text : String, options : String = "")
+      tag = @annotation_counter += 1
+      cmd = "set label #{tag} '#{text}' at #{x},#{y}"
+      cmd += " #{options}" unless options.blank?
+      gnuplot(cmd)
+      self
+    end
+
+    # Add a text annotation at graph coordinates (0-1 range).
+    def annotate_graph(x : Number, y : Number, text : String, options : String = "")
+      tag = @annotation_counter += 1
+      cmd = "set label #{tag} '#{text}' at graph #{x},#{y}"
+      cmd += " #{options}" unless options.blank?
+      gnuplot(cmd)
+      self
+    end
+
+    # Add an arrow from (x1, y1) to (x2, y2).
+    def arrow(x1 : Number, y1 : Number, x2 : Number, y2 : Number, options : String = "")
+      tag = @arrow_counter += 1
+      cmd = "set arrow #{tag} from #{x1},#{y1} to #{x2},#{y2}"
+      cmd += " #{options}" unless options.blank?
+      gnuplot(cmd)
+      self
+    end
+
+    # Add an arrow using graph coordinates (0-1 range).
+    def arrow_graph(x1 : Number, y1 : Number, x2 : Number, y2 : Number, options : String = "")
+      tag = @arrow_counter += 1
+      cmd = "set arrow #{tag} from graph #{x1},#{y1} to graph #{x2},#{y2}"
+      cmd += " #{options}" unless options.blank?
+      gnuplot(cmd)
+      self
+    end
+
+    # Add a horizontal line at the specified y value.
+    def hline(y : Number, options : String = "")
+      tag = @arrow_counter += 1
+      cmd = "set arrow #{tag} from graph 0,first #{y} to graph 1,first #{y} nohead"
+      cmd += " #{options}" unless options.blank?
+      gnuplot(cmd)
+      self
+    end
+
+    # Add a vertical line at the specified x value.
+    def vline(x : Number, options : String = "")
+      tag = @arrow_counter += 1
+      cmd = "set arrow #{tag} from first #{x},graph 0 to first #{x},graph 1 nohead"
+      cmd += " #{options}" unless options.blank?
+      gnuplot(cmd)
+      self
+    end
+
+    # ==================================================================================
+    # SCATTER PLOTS WITH COLOR/SIZE MAPPING
+    # ==================================================================================
+
+    # Draw a scatter plot with given x and y vectors.
+    # This is an alias for draw_points but with a more intuitive name.
+    def draw_scatter(x : X, y : Y) : Draw forall X, Y
+      draw_with_vecs("points", x, y)
+    end
+
+    # Draw a scatter plot with color mapping based on a third variable.
+    # The color values determine the color of each point using the current palette.
+    def draw_scatter_color(x : X, y : Y, color : C) : Draw forall X, Y, C
+      draw_with_vecs("points", x, y, color).palette_use
+    end
+
+    # Draw a scatter plot with size mapping based on a third variable.
+    # The size values determine the size of each point.
+    def draw_scatter_size(x : X, y : Y, size : S) : Draw forall X, Y, S
+      draw_with_vecs("points", x, y, size).variable_point_size
+    end
+
+    # Draw a scatter plot with both color and size mapping.
+    # Color is mapped to the third column, size to the fourth.
+    def draw_scatter_color_size(x : X, y : Y, color : C, size : S) : Draw forall X, Y, C, S
+      draw_with_vecs("points", x, y, color, size).palette_use.variable_point_size
+    end
+
+    # ==================================================================================
+    # HEATMAP / CONTOUR PLOTS
+    # ==================================================================================
+
+    # Draw a heatmap from a 2D matrix.
+    # The matrix should be an array of arrays where matrix[row][col] = value.
+    def draw_heatmap(matrix : Array(Array(Float64)))
+      # Generate x, y, z data from matrix
+      rows = matrix.size
+      return self if rows == 0
+      cols = matrix[0].size
+      return self if cols == 0
+
+      x = Array(Float64).new
+      y = Array(Float64).new
+      z = Array(Float64).new
+
+      rows.times do |i|
+        cols.times do |j|
+          x << j.to_f
+          y << i.to_f
+          z << matrix[i][j]
+        end
+      end
+
+      # Use pm3d map for heatmap visualization
+      gnuplot("set pm3d map")
+      gnuplot("set palette")
+      draw_with_vecs("pm3d", x, y, z)
+    end
+
+    # Draw a heatmap with explicit x, y coordinates and z values.
+    def draw_heatmap(x : X, y : Y, z : Z) : Draw forall X, Y, Z
+      gnuplot("set pm3d map")
+      gnuplot("set palette")
+      draw_with_vecs("pm3d", x, y, z)
+    end
+
+    # Draw contour lines from x, y, z data.
+    def draw_contour(x : X, y : Y, z : Z) : Draw forall X, Y, Z
+      gnuplot("set contour base")
+      gnuplot("set cntrparam levels auto")
+      gnuplot("unset surface")
+      gnuplot("set view map")
+      draw_with_vecs("lines", x, y, z)
+    end
+
+    # Draw filled contours from x, y, z data.
+    def draw_contour_filled(x : X, y : Y, z : Z) : Draw forall X, Y, Z
+      gnuplot("set pm3d map")
+      gnuplot("set contour base")
+      gnuplot("set cntrparam levels auto")
+      draw_with_vecs("pm3d", x, y, z)
+    end
+
+    # Set the number of contour levels.
+    def contour_levels(n : Int32)
+      gnuplot("set cntrparam levels #{n}")
+      self
+    end
+
+    # ==================================================================================
+    # BOX PLOTS
+    # ==================================================================================
+
+    # Draw a box plot (box-and-whisker plot) for the given data.
+    # Each element in data represents a group/category.
+    def draw_boxplot(data : Array(Array(Float64)), labels : Array(String)? = nil)
+      # Write data in candlestick format: x min whisker_min box_min box_max whisker_max
+      data.each_with_index do |group, i|
+        next if group.empty?
+
+        sorted = group.sort
+        n = sorted.size
+        min = sorted.first
+        max = sorted.last
+        q1 = sorted[(n * 0.25).to_i]
+        median = sorted[(n * 0.5).to_i]
+        q3 = sorted[(n * 0.75).to_i]
+
+        # IQR for whiskers
+        iqr = q3 - q1
+        whisker_min = [min, q1 - 1.5 * iqr].max
+        whisker_max = [max, q3 + 1.5 * iqr].min
+
+        x_pos = (i + 1).to_f
+        @data += String.build do |sb|
+          sb << "#==============================================================================" << Gnuplot::NEW_LINE
+          sb << "# DATASET #" << @numdatasets << " (boxplot)" << Gnuplot::NEW_LINE
+          sb << "#==============================================================================" << Gnuplot::NEW_LINE
+          sb << "#{x_pos} #{whisker_min} #{q1} #{median} #{q3} #{whisker_max}" << "\n\n"
+        end
+
+        label = labels.try(&.[i]?) || "Group #{i + 1}"
+        draw("'#{@data_filename}' index #{@numdatasets}", "1:2:3:4:5:6", "candlesticks")
+          .label(label)
+          .line_style(@drawspecs.size)
+        @numdatasets += 1
+      end
+      self
+    end
+
+    # Draw a single box plot for a data vector.
+    def draw_boxplot(data : Array(Float64), label : String = "Data")
+      draw_boxplot([data], [label])
+    end
+
+    # ==================================================================================
+    # BAR CHARTS WITH GROUPING
+    # ==================================================================================
+
+    # Draw grouped bar chart with categories and multiple series.
+    # categories: labels for x-axis
+    # series: hash of series_name => values
+    def draw_grouped_bars(categories : Array(String), series : Hash(String, Array(Float64)))
+      n_categories = categories.size
+      n_series = series.size
+      return self if n_categories == 0 || n_series == 0
+
+      # Set up histogram style for grouped bars
+      gnuplot("set style data histogram")
+      gnuplot("set style histogram cluster gap 1")
+      gnuplot("set style fill solid border -1")
+
+      series.each do |name, values|
+        draw_with_vecs("", categories, values).label(name)
+      end
+      self
+    end
+
+    # Draw stacked bar chart with categories and multiple series.
+    def draw_stacked_bars(categories : Array(String), series : Hash(String, Array(Float64)))
+      n_categories = categories.size
+      n_series = series.size
+      return self if n_categories == 0 || n_series == 0
+
+      gnuplot("set style data histogram")
+      gnuplot("set style histogram rowstacked")
+      gnuplot("set style fill solid border -1")
+
+      series.each do |name, values|
+        draw_with_vecs("", categories, values).label(name)
+      end
+      self
+    end
+
     def repr : String
       String.build do |script|
         # Add plot setup commands
@@ -500,8 +856,10 @@ module Cryplot
         script << "set #{title.repr} #{Gnuplot::NEW_LINE}" unless title.repr.blank?
         script << Gnuplot.command_value_str("set xrange", @xrange)
         script << Gnuplot.command_value_str("set yrange", @yrange)
+        script << Gnuplot.command_value_str("set y2range", @y2range)
         script << @xlabel << Gnuplot::NEW_LINE
         script << @ylabel << Gnuplot::NEW_LINE
+        script << @y2label << Gnuplot::NEW_LINE
         script << @zlabel << Gnuplot::NEW_LINE
         script << @rlabel << Gnuplot::NEW_LINE
         script << @border << Gnuplot::NEW_LINE
