@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cryplot">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="cryplot">
+  <title>cryplot main</title>
+  <script type="text/javascript">
+  CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          cryplot
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent " data-id="cryplot/Cryplot" data-name="cryplot">
+      <a href="Cryplot.html">Cryplot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cryplot/Cryplot/AxisLabel" data-name="cryplot::axislabel">
+      <a href="Cryplot/AxisLabel.html">AxisLabel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseMixin" data-name="cryplot::basemixin(t)">
+      <a href="Cryplot/BaseMixin.html">BaseMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BasePlot" data-name="cryplot::baseplot">
+      <a href="Cryplot/BasePlot.html">BasePlot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseTics" data-name="cryplot::basetics(t)">
+      <a href="Cryplot/BaseTics.html">BaseTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Border" data-name="cryplot::border">
+      <a href="Cryplot/Border.html">Border</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Depth" data-name="cryplot::depth">
+      <a href="Cryplot/Depth.html">Depth</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/DepthMixin" data-name="cryplot::depthmixin(t)">
+      <a href="Cryplot/DepthMixin.html">DepthMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Draw" data-name="cryplot::draw">
+      <a href="Cryplot/Draw.html">Draw</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Extension" data-name="cryplot::extension">
+      <a href="Cryplot/Extension.html">Extension</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Figure" data-name="cryplot::figure">
+      <a href="Cryplot/Figure.html">Figure</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Fill" data-name="cryplot::fill">
+      <a href="Cryplot/Fill.html">Fill</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurve" data-name="cryplot::filledcurve">
+      <a href="Cryplot/FilledCurve.html">FilledCurve</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurveMixin" data-name="cryplot::filledcurvemixin(t)">
+      <a href="Cryplot/FilledCurveMixin.html">FilledCurveMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillMixin" data-name="cryplot::fillmixin(t)">
+      <a href="Cryplot/FillMixin.html">FillMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillStyle" data-name="cryplot::fillstyle">
+      <a href="Cryplot/FillStyle.html">FillStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Font" data-name="cryplot::font">
+      <a href="Cryplot/Font.html">Font</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FontMixin" data-name="cryplot::fontmixin(t)">
+      <a href="Cryplot/FontMixin.html">FontMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Frame" data-name="cryplot::frame">
+      <a href="Cryplot/Frame.html">Frame</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FrameMixin" data-name="cryplot::framemixin(t)">
+      <a href="Cryplot/FrameMixin.html">FrameMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Grid" data-name="cryplot::grid">
+      <a href="Cryplot/Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/GridBase" data-name="cryplot::gridbase">
+      <a href="Cryplot/GridBase.html">GridBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/HistogramStyle" data-name="cryplot::histogramstyle">
+      <a href="Cryplot/HistogramStyle.html">HistogramStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Legend" data-name="cryplot::legend">
+      <a href="Cryplot/Legend.html">Legend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Line" data-name="cryplot::line">
+      <a href="Cryplot/Line.html">Line</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/LineMixin" data-name="cryplot::linemixin(t)">
+      <a href="Cryplot/LineMixin.html">LineMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MajorTics" data-name="cryplot::majortics">
+      <a href="Cryplot/MajorTics.html">MajorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MinorTics" data-name="cryplot::minortics">
+      <a href="Cryplot/MinorTics.html">MinorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MultiPlots" data-name="cryplot::multiplots">
+      <a href="Cryplot/MultiPlots.html">MultiPlots</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Offset" data-name="cryplot::offset">
+      <a href="Cryplot/Offset.html">Offset</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/OffsetMixin" data-name="cryplot::offsetmixin(t)">
+      <a href="Cryplot/OffsetMixin.html">OffsetMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Palette" data-name="cryplot::palette">
+      <a href="Cryplot/Palette.html">Palette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot" data-name="cryplot::plot">
+      <a href="Cryplot/Plot.html">Plot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot3D" data-name="cryplot::plot3d">
+      <a href="Cryplot/Plot3D.html">Plot3D</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PlotXD" data-name="cryplot::plotxd">
+      <a href="Cryplot/PlotXD.html">PlotXD</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Point" data-name="cryplot::point">
+      <a href="Cryplot/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PointMixin" data-name="cryplot::pointmixin(t)">
+      <a href="Cryplot/PointMixin.html">PointMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Show" data-name="cryplot::show">
+      <a href="Cryplot/Show.html">Show</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/ShowMixin" data-name="cryplot::showmixin(t)">
+      <a href="Cryplot/ShowMixin.html">ShowMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/StringOrFloat" data-name="cryplot::stringorfloat">
+      <a href="Cryplot/StringOrFloat.html">StringOrFloat</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Strings" data-name="cryplot::strings">
+      <a href="Cryplot/Strings.html">Strings</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Text" data-name="cryplot::text">
+      <a href="Cryplot/Text.html">Text</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TextMixin" data-name="cryplot::textmixin(t)">
+      <a href="Cryplot/TextMixin.html">TextMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Tics" data-name="cryplot::tics">
+      <a href="Cryplot/Tics.html">Tics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Title" data-name="cryplot::title">
+      <a href="Cryplot/Title.html">Title</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TitleMixin" data-name="cryplot::titlemixin(t)">
+      <a href="Cryplot/TitleMixin.html">TitleMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/UnkownPalette" data-name="cryplot::unkownpalette">
+      <a href="Cryplot/UnkownPalette.html">UnkownPalette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Vec" data-name="cryplot::vec">
+      <a href="Cryplot/Vec.html">Vec</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1><a id="crystal-plotting-shard" class="anchor" href="#crystal-plotting-shard">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Crystal Plotting Shard</h1>
+<p><code><a href="Cryplot.html">Cryplot</a></code> is Crystal plotting library powered by <code>gnuplot</code>. The goal of the <strong>Cryplot</strong> is to enable you, <strong>Crystal</strong> programmer, to <strong>conveniently plot beautiful graphs</strong> as easy as in other high-level programming languages.</p>
+<p>The only external runtime dependencies is <a href="http://www.gnuplot.info/">gnuplot</a> executable and it need to be in your system path.</p>
+<p><a href="https://github.com/Gnuplotting/gnuplot-palettes">gnuplot-palettes</a> color palettes are downloaded at shard installation and made available to your use via simply invoking the <code>plot#palette</code> and passing in any available palette enum <code><a href="Cryplot/Palette.html">Cryplot::Palette</a></code>.</p>
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Installation</h2>
+<ol>
+<li>
+<p>Add the dependency to your <code>shard.yml</code>:</p>
+<pre><code class="language-yaml">dependencies:
+  cryplot:
+    github: naqvis/cryplot</code></pre>
+</li>
+<li>
+<p>Run <code>shards install</code></p>
+</li>
+</ol>
+<h3><a id="example-1" class="anchor" href="#example-1">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Example 1</h3>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;cryplot&quot;</span>
+
+<span class="c"># Create a vector with values from 0 to 5 divived into 100 uniform intervals</span>
+x <span class="o">=</span> <span class="t">Cryplot</span>.linspace(<span class="n">0.0</span>, <span class="n">5.0</span>, <span class="n">100</span>)
+
+<span class="c"># Create a plot object</span>
+<span class="t">Cryplot</span>.plot {
+  <span class="c"># set color palette</span>
+  palette(<span class="n">:set2</span>)
+
+  <span class="c"># Draw a sine graph putting x on the x-axis and sin(x) on the y-axis</span>
+  draw_curve(x, x.map { <span class="o">|</span>v<span class="o">|</span> <span class="t">Math</span>.sin(v) }).label(<span class="s">&quot;sin(x)&quot;</span>).line_width(<span class="n">4</span>)
+
+  <span class="c"># Draw a cosine graph putting x on the x-axis and cos(x) on the y-axis</span>
+  draw_curve(x, x.map { <span class="o">|</span>v<span class="o">|</span> <span class="t">Math</span>.cos(v) }).label(<span class="s">&quot;cos(x)&quot;</span>).line_width(<span class="n">4</span>)
+
+  <span class="c"># Show the plot in a pop-up window</span>
+  show
+
+  <span class="c"># Save the plot a PDF file</span>
+  save(<span class="s">&quot;plot.pdf&quot;</span>)
+}
+</code></pre>
+<p>Running above sample code will produce and show you following plot:</p>
+<p align="center">
+    <img src="images/plot-set2.svg" width=60%;" title="sincos">
+</p>
+<h3><a id="example-2-use-custom-gnuplot-commands" class="anchor" href="#example-2-use-custom-gnuplot-commands">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Example 2 (Use custom gnuplot commands)</h3>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;cryplot&quot;</span>
+
+time <span class="o">=</span> [<span class="n">0.0</span>, <span class="n">1.0</span>, <span class="n">2.1</span>, <span class="n">3.1</span>, <span class="n">4.2</span>, <span class="n">5.2</span>, <span class="n">6.2</span>, <span class="n">7.2</span>, <span class="n">8.2</span>, <span class="n">9.1</span>, <span class="n">10.0</span>, <span class="n">11.0</span>, <span class="n">12.0</span>,
+        <span class="n">12.9</span>, <span class="n">13.8</span>, <span class="n">14.9</span>, <span class="n">15.9</span>, <span class="n">17.0</span>, <span class="n">17.9</span>, <span class="n">18.9</span>, <span class="n">20.0</span>, <span class="n">21.0</span>, <span class="n">22.0</span>, <span class="n">23.0</span>, <span class="n">24.0</span>, <span class="n">25.0</span>,
+        <span class="n">26.0</span>, <span class="n">27.0</span>, <span class="n">28.0</span>, <span class="n">29.0</span>, <span class="n">30.0</span>, <span class="n">31.0</span>, <span class="n">32.0</span>, <span class="n">32.9</span>, <span class="n">33.8</span>, <span class="n">34.7</span>, <span class="n">35.7</span>, <span class="n">36.6</span>, <span class="n">37.7</span>]
+
+angle <span class="o">=</span> [<span class="n">-14.7</span>, <span class="n">8.6</span>, <span class="n">28.8</span>, <span class="n">46.7</span>, <span class="n">47.4</span>, <span class="n">36.5</span>, <span class="n">37.0</span>, <span class="n">5.1</span>, <span class="n">-11.2</span>, <span class="n">-22.4</span>, <span class="n">-35.5</span>, <span class="n">-33.6</span>, <span class="n">-21.1</span>,
+         <span class="n">-15.0</span>, <span class="n">-1.6</span>, <span class="n">19.5</span>, <span class="n">27.5</span>, <span class="n">32.6</span>, <span class="n">27.5</span>, <span class="n">20.2</span>, <span class="n">13.8</span>, <span class="n">-1.3</span>, <span class="n">-24.5</span>, <span class="n">-25.0</span>, <span class="n">-25.0</span>, <span class="n">-20.2</span>,
+         <span class="n">-9.9</span>, <span class="n">5.8</span>, <span class="n">14.7</span>, <span class="n">21.8</span>, <span class="n">29.8</span>, <span class="n">21.4</span>, <span class="n">24.6</span>, <span class="n">25.8</span>, <span class="n">0.6</span>, <span class="n">-16.6</span>, <span class="n">-24.0</span>, <span class="n">-24.6</span>, <span class="n">-19.8</span>]
+
+stdvar <span class="o">=</span> [<span class="n">3.6</span>, <span class="n">3.6</span>, <span class="n">3.0</span>, <span class="n">3.4</span>, <span class="n">3.5</span>, <span class="n">3.4</span>, <span class="n">10.3</span>, <span class="n">3.4</span>, <span class="n">3.4</span>, <span class="n">3.5</span>, <span class="n">3.6</span>, <span class="n">3.9</span>, <span class="n">3.9</span>,
+          <span class="n">4.2</span>, <span class="n">2.7</span>, <span class="n">3.2</span>, <span class="n">2.8</span>, <span class="n">3.5</span>, <span class="n">2.7</span>, <span class="n">3.3</span>, <span class="n">3.4</span>, <span class="n">4.2</span>, <span class="n">6.7</span>, <span class="n">3.3</span>, <span class="n">3.1</span>, <span class="n">3.6</span>,
+          <span class="n">3.2</span>, <span class="n">3.2</span>, <span class="n">3.0</span>, <span class="n">3.5</span>, <span class="n">2.7</span>, <span class="n">4.1</span>, <span class="n">2.7</span>, <span class="n">12.0</span>, <span class="n">2.9</span>, <span class="n">3.2</span>, <span class="n">3.7</span>, <span class="n">3.8</span>, <span class="n">3.5</span>]
+
+<span class="t">Cryplot</span>.plot {
+  <span class="c"># Set the Title of the plort</span>
+  title(<span class="s">&quot;Cavendish Data&quot;</span>).title_font_size(<span class="n">20</span>).title_text_color(<span class="s">&quot;blue&quot;</span>)
+
+  <span class="c"># Set x-axix and y-axis labels</span>
+  xlabel(<span class="s">&quot;Time (s)&quot;</span>)
+  ylabel(<span class="s">&quot;Angle (mrad)&quot;</span>)
+
+  <span class="c"># Adjust the Legend position</span>
+  legend.at_top_right
+
+  <span class="c"># Adjust grid , border, style, tics settings</span>
+  grid
+    .show
+    .back
+    .line_width(<span class="n">1</span>)
+  border.none
+  style_fill.border_show
+  tics.hide
+  border.left.right.top.bottom.back
+
+  <span class="c"># Draw Error Bars</span>
+  draw_error_bars_y(time, angle, stdvar).line_width(<span class="n">2</span>).line_color(<span class="s">&quot;purple&quot;</span>).label_none
+
+  <span class="c"># Draw raw-data line by using the same dataset</span>
+  draw(<span class="s">&quot;1:2&quot;</span>, <span class="s">&quot;lines&quot;</span>).line_color(<span class="s">&quot;green&quot;</span>).line_width(<span class="n">2</span>).label(<span class="s">&quot;raw data&quot;</span>)
+
+  <span class="c"># custom gnuplot commands (these commands are passed as-is to gnuplot)</span>
+  gnuplot(<span class="s">&quot;theta(t) = theta0 + a * exp(-t / tau) * sin(2 * pi * t / T + phi)&quot;</span>)
+  gnuplot(<span class="s">&quot;fit theta(x) &#39;</span><span class="i">#{</span>data_filename<span class="i">}</span><span class="s">&#39; using 1:2:3 via a, tau, phi, T, theta0&quot;</span>)
+
+  <span class="c"># draw best fit curve</span>
+  draw(<span class="s">&quot;theta(x)&quot;</span>, <span class="s">&quot;&quot;</span>, <span class="s">&quot;&quot;</span>).label(<span class="s">&quot;best-fit curve&quot;</span>).line_width(<span class="n">3</span>).line_color(<span class="s">&quot;orange&quot;</span>)
+
+  <span class="c"># Set the size</span>
+  size(<span class="n">480</span>, <span class="n">380</span>)
+
+  <span class="c"># Show the plot in a pop-up window</span>
+  show
+
+  <span class="c"># Save the plot in PNG file</span>
+  save(<span class="s">&quot;best-fit-curve.png&quot;</span>)
+}</code></pre>
+<p>Running above sample code will produce and show you following plot:</p>
+<p align="center">
+    <img src="images/best-fit-curve.svg" width=60%;" title="Cavendish Data - Best Fit Curve">
+</p>
+<p>Refer to <code>specs</code> or <code>examples</code> folder for further samples.</p>
+<h2><a id="available-color-palettes" class="anchor" href="#available-color-palettes">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Available Color Palettes</h2>
+<p>Do you want to change the colors?</p>
+<p>All available color palettes and their names can be found <a href="https://github.com/naqvis/gnuplot-palettes">here</a>.</p>
+<h2><a id="development" class="anchor" href="#development">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Development</h2>
+<p>To run all tests:</p>
+<pre><code class="language-crystal">crystal spec</code></pre>
+<h2><a id="contributing" class="anchor" href="#contributing">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributing</h2>
+<ol>
+<li>Fork it (<a href="https://github.com/naqvis/cryplot/fork">https://github.com/naqvis/cryplot/fork</a>)</li>
+<li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+<li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
+<li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+<li>Create a new Pull Request</li>
+</ol>
+<h2><a id="contributors" class="anchor" href="#contributors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Contributors</h2>
+<ul>
+<li><a href="https://github.com/naqvis">Ali Naqvi</a> - creator and maintainer</li>
+</ul>
+</div>
+</body>
+</html>

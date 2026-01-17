@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cryplot">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="cryplot">
+  <title>Cryplot::MinorTics - cryplot main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cryplot
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cryplot/Cryplot" data-name="cryplot">
+      <a href="../Cryplot.html">Cryplot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cryplot/Cryplot/AxisLabel" data-name="cryplot::axislabel">
+      <a href="../Cryplot/AxisLabel.html">AxisLabel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseMixin" data-name="cryplot::basemixin(t)">
+      <a href="../Cryplot/BaseMixin.html">BaseMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BasePlot" data-name="cryplot::baseplot">
+      <a href="../Cryplot/BasePlot.html">BasePlot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseTics" data-name="cryplot::basetics(t)">
+      <a href="../Cryplot/BaseTics.html">BaseTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Border" data-name="cryplot::border">
+      <a href="../Cryplot/Border.html">Border</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Depth" data-name="cryplot::depth">
+      <a href="../Cryplot/Depth.html">Depth</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/DepthMixin" data-name="cryplot::depthmixin(t)">
+      <a href="../Cryplot/DepthMixin.html">DepthMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Draw" data-name="cryplot::draw">
+      <a href="../Cryplot/Draw.html">Draw</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Extension" data-name="cryplot::extension">
+      <a href="../Cryplot/Extension.html">Extension</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Figure" data-name="cryplot::figure">
+      <a href="../Cryplot/Figure.html">Figure</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Fill" data-name="cryplot::fill">
+      <a href="../Cryplot/Fill.html">Fill</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurve" data-name="cryplot::filledcurve">
+      <a href="../Cryplot/FilledCurve.html">FilledCurve</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurveMixin" data-name="cryplot::filledcurvemixin(t)">
+      <a href="../Cryplot/FilledCurveMixin.html">FilledCurveMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillMixin" data-name="cryplot::fillmixin(t)">
+      <a href="../Cryplot/FillMixin.html">FillMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillStyle" data-name="cryplot::fillstyle">
+      <a href="../Cryplot/FillStyle.html">FillStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Font" data-name="cryplot::font">
+      <a href="../Cryplot/Font.html">Font</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FontMixin" data-name="cryplot::fontmixin(t)">
+      <a href="../Cryplot/FontMixin.html">FontMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Frame" data-name="cryplot::frame">
+      <a href="../Cryplot/Frame.html">Frame</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FrameMixin" data-name="cryplot::framemixin(t)">
+      <a href="../Cryplot/FrameMixin.html">FrameMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Grid" data-name="cryplot::grid">
+      <a href="../Cryplot/Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/GridBase" data-name="cryplot::gridbase">
+      <a href="../Cryplot/GridBase.html">GridBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/HistogramStyle" data-name="cryplot::histogramstyle">
+      <a href="../Cryplot/HistogramStyle.html">HistogramStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Legend" data-name="cryplot::legend">
+      <a href="../Cryplot/Legend.html">Legend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Line" data-name="cryplot::line">
+      <a href="../Cryplot/Line.html">Line</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/LineMixin" data-name="cryplot::linemixin(t)">
+      <a href="../Cryplot/LineMixin.html">LineMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MajorTics" data-name="cryplot::majortics">
+      <a href="../Cryplot/MajorTics.html">MajorTics</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cryplot/Cryplot/MinorTics" data-name="cryplot::minortics">
+      <a href="../Cryplot/MinorTics.html">MinorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MultiPlots" data-name="cryplot::multiplots">
+      <a href="../Cryplot/MultiPlots.html">MultiPlots</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Offset" data-name="cryplot::offset">
+      <a href="../Cryplot/Offset.html">Offset</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/OffsetMixin" data-name="cryplot::offsetmixin(t)">
+      <a href="../Cryplot/OffsetMixin.html">OffsetMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Palette" data-name="cryplot::palette">
+      <a href="../Cryplot/Palette.html">Palette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot" data-name="cryplot::plot">
+      <a href="../Cryplot/Plot.html">Plot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot3D" data-name="cryplot::plot3d">
+      <a href="../Cryplot/Plot3D.html">Plot3D</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PlotXD" data-name="cryplot::plotxd">
+      <a href="../Cryplot/PlotXD.html">PlotXD</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Point" data-name="cryplot::point">
+      <a href="../Cryplot/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PointMixin" data-name="cryplot::pointmixin(t)">
+      <a href="../Cryplot/PointMixin.html">PointMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Show" data-name="cryplot::show">
+      <a href="../Cryplot/Show.html">Show</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/ShowMixin" data-name="cryplot::showmixin(t)">
+      <a href="../Cryplot/ShowMixin.html">ShowMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/StringOrFloat" data-name="cryplot::stringorfloat">
+      <a href="../Cryplot/StringOrFloat.html">StringOrFloat</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Strings" data-name="cryplot::strings">
+      <a href="../Cryplot/Strings.html">Strings</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Text" data-name="cryplot::text">
+      <a href="../Cryplot/Text.html">Text</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TextMixin" data-name="cryplot::textmixin(t)">
+      <a href="../Cryplot/TextMixin.html">TextMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Tics" data-name="cryplot::tics">
+      <a href="../Cryplot/Tics.html">Tics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Title" data-name="cryplot::title">
+      <a href="../Cryplot/Title.html">Title</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TitleMixin" data-name="cryplot::titlemixin(t)">
+      <a href="../Cryplot/TitleMixin.html">TitleMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/UnkownPalette" data-name="cryplot::unkownpalette">
+      <a href="../Cryplot/UnkownPalette.html">UnkownPalette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Vec" data-name="cryplot::vec">
+      <a href="../Cryplot/Vec.html">Vec</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    class
+  </span> Cryplot::<wbr>MinorTics
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>The class used to specify options for minor tics of a specific axis.</p>
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../Cryplot/BaseTics.html">Cryplot::BaseTics</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/tics.cr#L306" target="_blank">
+        plot/elems/tics.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new%28axis%3AString%29-class-method" class="signature"><strong>.new</strong>(axis : String)</a>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#automatic-instance-method" class="signature"><strong>#automatic</strong></a>
+        
+          <div class="summary"><p>Set the number of minor tics between major tics to be identified automatically.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#number%28value%3AInt32%29-instance-method" class="signature"><strong>#number</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the number of minor tics between major tics.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repr%3AString-instance-method" class="signature"><strong>#repr</strong> : String</a>
+        
+          <div class="summary"><p>returns a string representation of object of some class</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#to_s</strong>(io : IO) : Nil</a>
+        
+          <div class="summary"><p>Appends a short String representation of this object which includes its class name and its object address.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseTics.html">Cryplot::BaseTics</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseTics.html#along_axis-instance-method" class="tooltip">
+      <span>along_axis</span>
+    along_axis</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#along_border-instance-method" class="tooltip">
+      <span>along_border</span>
+    along_border</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#format%28fmt%3AString%29-instance-method" class="tooltip">
+      <span>format(fmt : String)</span>
+    format</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#inside_graph-instance-method" class="tooltip">
+      <span>inside_graph</span>
+    inside_graph</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#logscale%28base%3D10%29-instance-method" class="tooltip">
+      <span>logscale(base = <span class="n">10</span>)</span>
+    logscale</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#mirror%28value%3Dtrue%29-instance-method" class="tooltip">
+      <span>mirror(value = <span class="n">true</span>)</span>
+    mirror</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#outside_graph-instance-method" class="tooltip">
+      <span>outside_graph</span>
+    outside_graph</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#repr%28axis%3AString%29%3AString-instance-method" class="tooltip">
+      <span>repr(axis : String) : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#rotate%28value%3Dtrue%29-instance-method" class="tooltip">
+      <span>rotate(value = <span class="n">true</span>)</span>
+    rotate</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#rotate_by%28degrees%3ANumber%29-instance-method" class="tooltip">
+      <span>rotate_by(degrees : Number)</span>
+    rotate_by</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#scale_by%28value%3ANumber%29-instance-method" class="tooltip">
+      <span>scale_by(value : Number)</span>
+    scale_by</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#scale_major_by%28value%3ANumber%29-instance-method" class="tooltip">
+      <span>scale_major_by(value : Number)</span>
+    scale_major_by</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#scale_minor_by%28value%3ANumber%29-instance-method" class="tooltip">
+      <span>scale_minor_by(value : Number)</span>
+    scale_minor_by</a>, 
+    
+  
+    <a href="../Cryplot/BaseTics.html#tics_base_repr%3AString-instance-method" class="tooltip">
+      <span>tics_base_repr : String</span>
+    tics_base_repr</a>
+    
+  
+
+
+      
+
+  <h3>Constructor methods inherited from module <code><a href="../Cryplot/BaseTics.html">Cryplot::BaseTics</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseTics.html#new-class-method" class="tooltip">
+      <span>new</span>
+    new</a>
+    
+  
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/ShowMixin.html">Cryplot::ShowMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/ShowMixin.html#hidden%3F%3ABool-instance-method" class="tooltip">
+      <span>hidden? : Bool</span>
+    hidden?</a>, 
+    
+  
+    <a href="../Cryplot/ShowMixin.html#hide-instance-method" class="tooltip">
+      <span>hide</span>
+    hide</a>, 
+    
+  
+    <a href="../Cryplot/ShowMixin.html#show%28value%3Dtrue%29-instance-method" class="tooltip">
+      <span>show(value = <span class="n">true</span>)</span>
+    show</a>, 
+    
+  
+    <a href="../Cryplot/ShowMixin.html#show_repr-instance-method" class="tooltip">
+      <span>show_repr</span>
+    show_repr</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/OffsetMixin.html">Cryplot::OffsetMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/OffsetMixin.html#offset_repr-instance-method" class="tooltip">
+      <span>offset_repr</span>
+    offset_repr</a>, 
+    
+  
+    <a href="../Cryplot/OffsetMixin.html#shift_along_graph_x%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>shift_along_graph_x(val : Number)</span>
+    shift_along_graph_x</a>, 
+    
+  
+    <a href="../Cryplot/OffsetMixin.html#shift_along_graph_y%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>shift_along_graph_y(val : Number)</span>
+    shift_along_graph_y</a>, 
+    
+  
+    <a href="../Cryplot/OffsetMixin.html#shift_along_screen_x%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>shift_along_screen_x(val : Number)</span>
+    shift_along_screen_x</a>, 
+    
+  
+    <a href="../Cryplot/OffsetMixin.html#shift_along_screen_y%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>shift_along_screen_y(val : Number)</span>
+    shift_along_screen_y</a>, 
+    
+  
+    <a href="../Cryplot/OffsetMixin.html#shift_along_x%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>shift_along_x(val : Number)</span>
+    shift_along_x</a>, 
+    
+  
+    <a href="../Cryplot/OffsetMixin.html#shift_along_y%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>shift_along_y(val : Number)</span>
+    shift_along_y</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/TextMixin.html">Cryplot::TextMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/TextMixin.html#enhanced%28value%3ABool%29%3AT-instance-method" class="tooltip">
+      <span>enhanced(value : Bool) : T</span>
+    enhanced</a>, 
+    
+  
+    <a href="../Cryplot/TextMixin.html#text_color%28color%3AString%29%3AT-instance-method" class="tooltip">
+      <span>text_color(color : String) : T</span>
+    text_color</a>, 
+    
+  
+    <a href="../Cryplot/TextMixin.html#text_repr%3AString-instance-method" class="tooltip">
+      <span>text_repr : String</span>
+    text_repr</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/FontMixin.html">Cryplot::FontMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/FontMixin.html#font_name%28name%3AString%29%3AT-instance-method" class="tooltip">
+      <span>font_name(name : String) : T</span>
+    font_name</a>, 
+    
+  
+    <a href="../Cryplot/FontMixin.html#font_repr%3AString-instance-method" class="tooltip">
+      <span>font_repr : String</span>
+    font_repr</a>, 
+    
+  
+    <a href="../Cryplot/FontMixin.html#font_size%28size%3AInt32%29%3AT-instance-method" class="tooltip">
+      <span>font_size(size : Int32) : T</span>
+    font_size</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new(axis:String)-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>(axis : String)
+
+        <a class="method-permalink" href="#new%28axis%3AString%29-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/tics.cr#L313" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="automatic-instance-method">
+      <div class="signature">
+        
+        def <strong>automatic</strong>
+
+        <a class="method-permalink" href="#automatic-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the number of minor tics between major tics to be identified automatically.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/tics.cr#L319" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="number(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>number</strong>(value : Int32)
+
+        <a class="method-permalink" href="#number%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the number of minor tics between major tics.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/tics.cr#L325" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repr:String-instance-method">
+      <div class="signature">
+        
+        def <strong>repr</strong> : String
+
+        <a class="method-permalink" href="#repr%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from module <a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/MinorTics.html">Cryplot::MinorTics</a>)
+            </div>
+          
+          <p>returns a string representation of object of some class</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/tics.cr#L330" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(io:IO):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#to_s%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Appends a short String representation of this object
+which includes its class name and its object address.</p>
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">Person</span>
+  <span class="k">def</span> <span class="m">initialize</span>(@name : <span class="t">String</span>, @age : <span class="t">Int32</span>)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="t">Person</span>.new(<span class="s">&quot;John&quot;</span>, <span class="n">32</span>).to_s <span class="c"># =&gt; #&lt;Person:0x10a199f20&gt;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/tics.cr#L335" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

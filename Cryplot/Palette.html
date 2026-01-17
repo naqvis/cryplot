@@ -1,0 +1,2155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cryplot">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="cryplot">
+  <title>Cryplot::Palette - cryplot main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cryplot
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cryplot/Cryplot" data-name="cryplot">
+      <a href="../Cryplot.html">Cryplot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cryplot/Cryplot/AxisLabel" data-name="cryplot::axislabel">
+      <a href="../Cryplot/AxisLabel.html">AxisLabel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseMixin" data-name="cryplot::basemixin(t)">
+      <a href="../Cryplot/BaseMixin.html">BaseMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BasePlot" data-name="cryplot::baseplot">
+      <a href="../Cryplot/BasePlot.html">BasePlot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseTics" data-name="cryplot::basetics(t)">
+      <a href="../Cryplot/BaseTics.html">BaseTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Border" data-name="cryplot::border">
+      <a href="../Cryplot/Border.html">Border</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Depth" data-name="cryplot::depth">
+      <a href="../Cryplot/Depth.html">Depth</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/DepthMixin" data-name="cryplot::depthmixin(t)">
+      <a href="../Cryplot/DepthMixin.html">DepthMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Draw" data-name="cryplot::draw">
+      <a href="../Cryplot/Draw.html">Draw</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Extension" data-name="cryplot::extension">
+      <a href="../Cryplot/Extension.html">Extension</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Figure" data-name="cryplot::figure">
+      <a href="../Cryplot/Figure.html">Figure</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Fill" data-name="cryplot::fill">
+      <a href="../Cryplot/Fill.html">Fill</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurve" data-name="cryplot::filledcurve">
+      <a href="../Cryplot/FilledCurve.html">FilledCurve</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurveMixin" data-name="cryplot::filledcurvemixin(t)">
+      <a href="../Cryplot/FilledCurveMixin.html">FilledCurveMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillMixin" data-name="cryplot::fillmixin(t)">
+      <a href="../Cryplot/FillMixin.html">FillMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillStyle" data-name="cryplot::fillstyle">
+      <a href="../Cryplot/FillStyle.html">FillStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Font" data-name="cryplot::font">
+      <a href="../Cryplot/Font.html">Font</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FontMixin" data-name="cryplot::fontmixin(t)">
+      <a href="../Cryplot/FontMixin.html">FontMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Frame" data-name="cryplot::frame">
+      <a href="../Cryplot/Frame.html">Frame</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FrameMixin" data-name="cryplot::framemixin(t)">
+      <a href="../Cryplot/FrameMixin.html">FrameMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Grid" data-name="cryplot::grid">
+      <a href="../Cryplot/Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/GridBase" data-name="cryplot::gridbase">
+      <a href="../Cryplot/GridBase.html">GridBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/HistogramStyle" data-name="cryplot::histogramstyle">
+      <a href="../Cryplot/HistogramStyle.html">HistogramStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Legend" data-name="cryplot::legend">
+      <a href="../Cryplot/Legend.html">Legend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Line" data-name="cryplot::line">
+      <a href="../Cryplot/Line.html">Line</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/LineMixin" data-name="cryplot::linemixin(t)">
+      <a href="../Cryplot/LineMixin.html">LineMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MajorTics" data-name="cryplot::majortics">
+      <a href="../Cryplot/MajorTics.html">MajorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MinorTics" data-name="cryplot::minortics">
+      <a href="../Cryplot/MinorTics.html">MinorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MultiPlots" data-name="cryplot::multiplots">
+      <a href="../Cryplot/MultiPlots.html">MultiPlots</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Offset" data-name="cryplot::offset">
+      <a href="../Cryplot/Offset.html">Offset</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/OffsetMixin" data-name="cryplot::offsetmixin(t)">
+      <a href="../Cryplot/OffsetMixin.html">OffsetMixin</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cryplot/Cryplot/Palette" data-name="cryplot::palette">
+      <a href="../Cryplot/Palette.html">Palette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot" data-name="cryplot::plot">
+      <a href="../Cryplot/Plot.html">Plot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot3D" data-name="cryplot::plot3d">
+      <a href="../Cryplot/Plot3D.html">Plot3D</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PlotXD" data-name="cryplot::plotxd">
+      <a href="../Cryplot/PlotXD.html">PlotXD</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Point" data-name="cryplot::point">
+      <a href="../Cryplot/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PointMixin" data-name="cryplot::pointmixin(t)">
+      <a href="../Cryplot/PointMixin.html">PointMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Show" data-name="cryplot::show">
+      <a href="../Cryplot/Show.html">Show</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/ShowMixin" data-name="cryplot::showmixin(t)">
+      <a href="../Cryplot/ShowMixin.html">ShowMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/StringOrFloat" data-name="cryplot::stringorfloat">
+      <a href="../Cryplot/StringOrFloat.html">StringOrFloat</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Strings" data-name="cryplot::strings">
+      <a href="../Cryplot/Strings.html">Strings</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Text" data-name="cryplot::text">
+      <a href="../Cryplot/Text.html">Text</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TextMixin" data-name="cryplot::textmixin(t)">
+      <a href="../Cryplot/TextMixin.html">TextMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Tics" data-name="cryplot::tics">
+      <a href="../Cryplot/Tics.html">Tics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Title" data-name="cryplot::title">
+      <a href="../Cryplot/Title.html">Title</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TitleMixin" data-name="cryplot::titlemixin(t)">
+      <a href="../Cryplot/TitleMixin.html">TitleMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/UnkownPalette" data-name="cryplot::unkownpalette">
+      <a href="../Cryplot/UnkownPalette.html">UnkownPalette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Vec" data-name="cryplot::vec">
+      <a href="../Cryplot/Vec.html">Vec</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    enum
+  </span> Cryplot::<wbr>Palette
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Gnuplot color palettes adapted from https://github.com/Gnuplotting/gnuplot-palettes</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L9" target="_blank">
+        plot/palettes.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="enum-members" class="anchor" href="#enum-members">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Enum Members
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="Accent">
+        <strong>Accent</strong> = <code><span class="n">0</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Bentcoolwarm">
+        <strong>Bentcoolwarm</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Blues">
+        <strong>Blues</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Brbg">
+        <strong>Brbg</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Bugn">
+        <strong>Bugn</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Bupu">
+        <strong>Bupu</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Chromajs">
+        <strong>Chromajs</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Dark2">
+        <strong>Dark2</strong> = <code><span class="n">7</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gnbu">
+        <strong>Gnbu</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Gnpu">
+        <strong>Gnpu</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Greens">
+        <strong>Greens</strong> = <code><span class="n">10</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Greys">
+        <strong>Greys</strong> = <code><span class="n">11</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Inferno">
+        <strong>Inferno</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Jet">
+        <strong>Jet</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Magma">
+        <strong>Magma</strong> = <code><span class="n">14</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Moreland">
+        <strong>Moreland</strong> = <code><span class="n">15</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Oranges">
+        <strong>Oranges</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Orrd">
+        <strong>Orrd</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Paired">
+        <strong>Paired</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Parula">
+        <strong>Parula</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pastel1">
+        <strong>Pastel1</strong> = <code><span class="n">20</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pastel2">
+        <strong>Pastel2</strong> = <code><span class="n">21</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Piyg">
+        <strong>Piyg</strong> = <code><span class="n">22</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Plasma">
+        <strong>Plasma</strong> = <code><span class="n">23</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Prgn">
+        <strong>Prgn</strong> = <code><span class="n">24</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pubu">
+        <strong>Pubu</strong> = <code><span class="n">25</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Pubugn">
+        <strong>Pubugn</strong> = <code><span class="n">26</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Puor">
+        <strong>Puor</strong> = <code><span class="n">27</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Purd">
+        <strong>Purd</strong> = <code><span class="n">28</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Purples">
+        <strong>Purples</strong> = <code><span class="n">29</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Rdbu">
+        <strong>Rdbu</strong> = <code><span class="n">30</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Rdgy">
+        <strong>Rdgy</strong> = <code><span class="n">31</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Rdpu">
+        <strong>Rdpu</strong> = <code><span class="n">32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Rdylbu">
+        <strong>Rdylbu</strong> = <code><span class="n">33</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Rdylgn">
+        <strong>Rdylgn</strong> = <code><span class="n">34</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Reds">
+        <strong>Reds</strong> = <code><span class="n">35</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Sand">
+        <strong>Sand</strong> = <code><span class="n">36</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Set1">
+        <strong>Set1</strong> = <code><span class="n">37</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Set2">
+        <strong>Set2</strong> = <code><span class="n">38</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Set3">
+        <strong>Set3</strong> = <code><span class="n">39</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Spectral">
+        <strong>Spectral</strong> = <code><span class="n">40</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Turbo">
+        <strong>Turbo</strong> = <code><span class="n">41</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Viridis">
+        <strong>Viridis</strong> = <code><span class="n">42</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Whylrd">
+        <strong>Whylrd</strong> = <code><span class="n">43</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ylgn">
+        <strong>Ylgn</strong> = <code><span class="n">44</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ylgnbu">
+        <strong>Ylgnbu</strong> = <code><span class="n">45</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ylorbr">
+        <strong>Ylorbr</strong> = <code><span class="n">46</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ylorrd">
+        <strong>Ylorrd</strong> = <code><span class="n">47</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="Ylrd">
+        <strong>Ylrd</strong> = <code><span class="n">48</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#accent%3F-instance-method" class="signature"><strong>#accent?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Accent">Accent</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bentcoolwarm%3F-instance-method" class="signature"><strong>#bentcoolwarm?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Bentcoolwarm">Bentcoolwarm</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#blues%3F-instance-method" class="signature"><strong>#blues?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Blues">Blues</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#brbg%3F-instance-method" class="signature"><strong>#brbg?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Brbg">Brbg</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bugn%3F-instance-method" class="signature"><strong>#bugn?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Bugn">Bugn</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#bupu%3F-instance-method" class="signature"><strong>#bupu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Bupu">Bupu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#chromajs%3F-instance-method" class="signature"><strong>#chromajs?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Chromajs">Chromajs</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#dark2%3F-instance-method" class="signature"><strong>#dark2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Dark2">Dark2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#data-instance-method" class="signature"><strong>#data</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gnbu%3F-instance-method" class="signature"><strong>#gnbu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Gnbu">Gnbu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#gnpu%3F-instance-method" class="signature"><strong>#gnpu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Gnpu">Gnpu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#greens%3F-instance-method" class="signature"><strong>#greens?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Greens">Greens</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#greys%3F-instance-method" class="signature"><strong>#greys?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Greys">Greys</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#inferno%3F-instance-method" class="signature"><strong>#inferno?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Inferno">Inferno</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#jet%3F-instance-method" class="signature"><strong>#jet?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Jet">Jet</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#magma%3F-instance-method" class="signature"><strong>#magma?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Magma">Magma</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#moreland%3F-instance-method" class="signature"><strong>#moreland?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Moreland">Moreland</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#oranges%3F-instance-method" class="signature"><strong>#oranges?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Oranges">Oranges</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#orrd%3F-instance-method" class="signature"><strong>#orrd?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Orrd">Orrd</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#paired%3F-instance-method" class="signature"><strong>#paired?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Paired">Paired</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#parula%3F-instance-method" class="signature"><strong>#parula?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Parula">Parula</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pastel1%3F-instance-method" class="signature"><strong>#pastel1?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pastel1">Pastel1</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pastel2%3F-instance-method" class="signature"><strong>#pastel2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pastel2">Pastel2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#piyg%3F-instance-method" class="signature"><strong>#piyg?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Piyg">Piyg</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#plasma%3F-instance-method" class="signature"><strong>#plasma?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Plasma">Plasma</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#prgn%3F-instance-method" class="signature"><strong>#prgn?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Prgn">Prgn</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pubu%3F-instance-method" class="signature"><strong>#pubu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pubu">Pubu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#pubugn%3F-instance-method" class="signature"><strong>#pubugn?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pubugn">Pubugn</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#puor%3F-instance-method" class="signature"><strong>#puor?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Puor">Puor</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#purd%3F-instance-method" class="signature"><strong>#purd?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Purd">Purd</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#purples%3F-instance-method" class="signature"><strong>#purples?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Purples">Purples</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rdbu%3F-instance-method" class="signature"><strong>#rdbu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdbu">Rdbu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rdgy%3F-instance-method" class="signature"><strong>#rdgy?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdgy">Rdgy</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rdpu%3F-instance-method" class="signature"><strong>#rdpu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdpu">Rdpu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rdylbu%3F-instance-method" class="signature"><strong>#rdylbu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdylbu">Rdylbu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#rdylgn%3F-instance-method" class="signature"><strong>#rdylgn?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdylgn">Rdylgn</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#reds%3F-instance-method" class="signature"><strong>#reds?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Reds">Reds</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#sand%3F-instance-method" class="signature"><strong>#sand?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Sand">Sand</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set1%3F-instance-method" class="signature"><strong>#set1?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Set1">Set1</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set2%3F-instance-method" class="signature"><strong>#set2?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Set2">Set2</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set3%3F-instance-method" class="signature"><strong>#set3?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Set3">Set3</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#spectral%3F-instance-method" class="signature"><strong>#spectral?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Spectral">Spectral</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#to_s</strong>(io : IO) : Nil</a>
+        
+          <div class="summary"><p>Appends a <code>String</code> representation of this enum member to the given <em>io</em>.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#turbo%3F-instance-method" class="signature"><strong>#turbo?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Turbo">Turbo</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#viridis%3F-instance-method" class="signature"><strong>#viridis?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Viridis">Viridis</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#whylrd%3F-instance-method" class="signature"><strong>#whylrd?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Whylrd">Whylrd</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ylgn%3F-instance-method" class="signature"><strong>#ylgn?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylgn">Ylgn</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ylgnbu%3F-instance-method" class="signature"><strong>#ylgnbu?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylgnbu">Ylgnbu</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ylorbr%3F-instance-method" class="signature"><strong>#ylorbr?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylorbr">Ylorbr</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ylorrd%3F-instance-method" class="signature"><strong>#ylorrd?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylorrd">Ylorrd</a></code></p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#ylrd%3F-instance-method" class="signature"><strong>#ylrd?</strong></a>
+        
+          <div class="summary"><p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylrd">Ylrd</a></code></p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="accent?-instance-method">
+      <div class="signature">
+        
+        def <strong>accent?</strong>
+
+        <a class="method-permalink" href="#accent%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Accent">Accent</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bentcoolwarm?-instance-method">
+      <div class="signature">
+        
+        def <strong>bentcoolwarm?</strong>
+
+        <a class="method-permalink" href="#bentcoolwarm%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Bentcoolwarm">Bentcoolwarm</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="blues?-instance-method">
+      <div class="signature">
+        
+        def <strong>blues?</strong>
+
+        <a class="method-permalink" href="#blues%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Blues">Blues</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L12" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="brbg?-instance-method">
+      <div class="signature">
+        
+        def <strong>brbg?</strong>
+
+        <a class="method-permalink" href="#brbg%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Brbg">Brbg</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bugn?-instance-method">
+      <div class="signature">
+        
+        def <strong>bugn?</strong>
+
+        <a class="method-permalink" href="#bugn%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Bugn">Bugn</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="bupu?-instance-method">
+      <div class="signature">
+        
+        def <strong>bupu?</strong>
+
+        <a class="method-permalink" href="#bupu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Bupu">Bupu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L15" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="chromajs?-instance-method">
+      <div class="signature">
+        
+        def <strong>chromajs?</strong>
+
+        <a class="method-permalink" href="#chromajs%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Chromajs">Chromajs</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L16" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="dark2?-instance-method">
+      <div class="signature">
+        
+        def <strong>dark2?</strong>
+
+        <a class="method-permalink" href="#dark2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Dark2">Dark2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L17" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="data-instance-method">
+      <div class="signature">
+        
+        def <strong>data</strong>
+
+        <a class="method-permalink" href="#data-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L64" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gnbu?-instance-method">
+      <div class="signature">
+        
+        def <strong>gnbu?</strong>
+
+        <a class="method-permalink" href="#gnbu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Gnbu">Gnbu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="gnpu?-instance-method">
+      <div class="signature">
+        
+        def <strong>gnpu?</strong>
+
+        <a class="method-permalink" href="#gnpu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Gnpu">Gnpu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="greens?-instance-method">
+      <div class="signature">
+        
+        def <strong>greens?</strong>
+
+        <a class="method-permalink" href="#greens%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Greens">Greens</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L20" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="greys?-instance-method">
+      <div class="signature">
+        
+        def <strong>greys?</strong>
+
+        <a class="method-permalink" href="#greys%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Greys">Greys</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L21" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="inferno?-instance-method">
+      <div class="signature">
+        
+        def <strong>inferno?</strong>
+
+        <a class="method-permalink" href="#inferno%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Inferno">Inferno</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L22" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="jet?-instance-method">
+      <div class="signature">
+        
+        def <strong>jet?</strong>
+
+        <a class="method-permalink" href="#jet%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Jet">Jet</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="magma?-instance-method">
+      <div class="signature">
+        
+        def <strong>magma?</strong>
+
+        <a class="method-permalink" href="#magma%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Magma">Magma</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="moreland?-instance-method">
+      <div class="signature">
+        
+        def <strong>moreland?</strong>
+
+        <a class="method-permalink" href="#moreland%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Moreland">Moreland</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L25" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="oranges?-instance-method">
+      <div class="signature">
+        
+        def <strong>oranges?</strong>
+
+        <a class="method-permalink" href="#oranges%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Oranges">Oranges</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L26" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="orrd?-instance-method">
+      <div class="signature">
+        
+        def <strong>orrd?</strong>
+
+        <a class="method-permalink" href="#orrd%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Orrd">Orrd</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="paired?-instance-method">
+      <div class="signature">
+        
+        def <strong>paired?</strong>
+
+        <a class="method-permalink" href="#paired%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Paired">Paired</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L28" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="parula?-instance-method">
+      <div class="signature">
+        
+        def <strong>parula?</strong>
+
+        <a class="method-permalink" href="#parula%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Parula">Parula</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L29" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pastel1?-instance-method">
+      <div class="signature">
+        
+        def <strong>pastel1?</strong>
+
+        <a class="method-permalink" href="#pastel1%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pastel1">Pastel1</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pastel2?-instance-method">
+      <div class="signature">
+        
+        def <strong>pastel2?</strong>
+
+        <a class="method-permalink" href="#pastel2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pastel2">Pastel2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="piyg?-instance-method">
+      <div class="signature">
+        
+        def <strong>piyg?</strong>
+
+        <a class="method-permalink" href="#piyg%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Piyg">Piyg</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L32" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="plasma?-instance-method">
+      <div class="signature">
+        
+        def <strong>plasma?</strong>
+
+        <a class="method-permalink" href="#plasma%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Plasma">Plasma</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L33" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="prgn?-instance-method">
+      <div class="signature">
+        
+        def <strong>prgn?</strong>
+
+        <a class="method-permalink" href="#prgn%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Prgn">Prgn</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L34" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pubu?-instance-method">
+      <div class="signature">
+        
+        def <strong>pubu?</strong>
+
+        <a class="method-permalink" href="#pubu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pubu">Pubu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="pubugn?-instance-method">
+      <div class="signature">
+        
+        def <strong>pubugn?</strong>
+
+        <a class="method-permalink" href="#pubugn%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Pubugn">Pubugn</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="puor?-instance-method">
+      <div class="signature">
+        
+        def <strong>puor?</strong>
+
+        <a class="method-permalink" href="#puor%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Puor">Puor</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L37" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="purd?-instance-method">
+      <div class="signature">
+        
+        def <strong>purd?</strong>
+
+        <a class="method-permalink" href="#purd%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Purd">Purd</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L38" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="purples?-instance-method">
+      <div class="signature">
+        
+        def <strong>purples?</strong>
+
+        <a class="method-permalink" href="#purples%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Purples">Purples</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L39" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rdbu?-instance-method">
+      <div class="signature">
+        
+        def <strong>rdbu?</strong>
+
+        <a class="method-permalink" href="#rdbu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdbu">Rdbu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L40" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rdgy?-instance-method">
+      <div class="signature">
+        
+        def <strong>rdgy?</strong>
+
+        <a class="method-permalink" href="#rdgy%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdgy">Rdgy</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rdpu?-instance-method">
+      <div class="signature">
+        
+        def <strong>rdpu?</strong>
+
+        <a class="method-permalink" href="#rdpu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdpu">Rdpu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rdylbu?-instance-method">
+      <div class="signature">
+        
+        def <strong>rdylbu?</strong>
+
+        <a class="method-permalink" href="#rdylbu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdylbu">Rdylbu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L43" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="rdylgn?-instance-method">
+      <div class="signature">
+        
+        def <strong>rdylgn?</strong>
+
+        <a class="method-permalink" href="#rdylgn%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Rdylgn">Rdylgn</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="reds?-instance-method">
+      <div class="signature">
+        
+        def <strong>reds?</strong>
+
+        <a class="method-permalink" href="#reds%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Reds">Reds</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L45" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="sand?-instance-method">
+      <div class="signature">
+        
+        def <strong>sand?</strong>
+
+        <a class="method-permalink" href="#sand%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Sand">Sand</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L46" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set1?-instance-method">
+      <div class="signature">
+        
+        def <strong>set1?</strong>
+
+        <a class="method-permalink" href="#set1%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Set1">Set1</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L47" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set2?-instance-method">
+      <div class="signature">
+        
+        def <strong>set2?</strong>
+
+        <a class="method-permalink" href="#set2%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Set2">Set2</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set3?-instance-method">
+      <div class="signature">
+        
+        def <strong>set3?</strong>
+
+        <a class="method-permalink" href="#set3%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Set3">Set3</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="spectral?-instance-method">
+      <div class="signature">
+        
+        def <strong>spectral?</strong>
+
+        <a class="method-permalink" href="#spectral%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Spectral">Spectral</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L50" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(io:IO):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#to_s%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from struct Enum
+            </div>
+          
+          <p>Appends a <code>String</code> representation of this enum member to the given <em>io</em>.</p>
+<p>See also: <code><a href="../Cryplot/Palette.html#to_s%28io%3AIO%29%3ANil-instance-method">#to_s</a></code>.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L60" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="turbo?-instance-method">
+      <div class="signature">
+        
+        def <strong>turbo?</strong>
+
+        <a class="method-permalink" href="#turbo%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Turbo">Turbo</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L51" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="viridis?-instance-method">
+      <div class="signature">
+        
+        def <strong>viridis?</strong>
+
+        <a class="method-permalink" href="#viridis%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Viridis">Viridis</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L52" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="whylrd?-instance-method">
+      <div class="signature">
+        
+        def <strong>whylrd?</strong>
+
+        <a class="method-permalink" href="#whylrd%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Whylrd">Whylrd</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ylgn?-instance-method">
+      <div class="signature">
+        
+        def <strong>ylgn?</strong>
+
+        <a class="method-permalink" href="#ylgn%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylgn">Ylgn</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L54" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ylgnbu?-instance-method">
+      <div class="signature">
+        
+        def <strong>ylgnbu?</strong>
+
+        <a class="method-permalink" href="#ylgnbu%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylgnbu">Ylgnbu</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ylorbr?-instance-method">
+      <div class="signature">
+        
+        def <strong>ylorbr?</strong>
+
+        <a class="method-permalink" href="#ylorbr%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylorbr">Ylorbr</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L56" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ylorrd?-instance-method">
+      <div class="signature">
+        
+        def <strong>ylorrd?</strong>
+
+        <a class="method-permalink" href="#ylorrd%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylorrd">Ylorrd</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="ylrd?-instance-method">
+      <div class="signature">
+        
+        def <strong>ylrd?</strong>
+
+        <a class="method-permalink" href="#ylrd%3F-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Returns <code>true</code> if this enum value equals <code><a href="../Cryplot/Palette.html#Ylrd">Ylrd</a></code></p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/palettes.cr#L58" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

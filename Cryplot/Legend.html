@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cryplot">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="cryplot">
+  <title>Cryplot::Legend - cryplot main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cryplot
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cryplot/Cryplot" data-name="cryplot">
+      <a href="../Cryplot.html">Cryplot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cryplot/Cryplot/AxisLabel" data-name="cryplot::axislabel">
+      <a href="../Cryplot/AxisLabel.html">AxisLabel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseMixin" data-name="cryplot::basemixin(t)">
+      <a href="../Cryplot/BaseMixin.html">BaseMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BasePlot" data-name="cryplot::baseplot">
+      <a href="../Cryplot/BasePlot.html">BasePlot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseTics" data-name="cryplot::basetics(t)">
+      <a href="../Cryplot/BaseTics.html">BaseTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Border" data-name="cryplot::border">
+      <a href="../Cryplot/Border.html">Border</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Depth" data-name="cryplot::depth">
+      <a href="../Cryplot/Depth.html">Depth</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/DepthMixin" data-name="cryplot::depthmixin(t)">
+      <a href="../Cryplot/DepthMixin.html">DepthMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Draw" data-name="cryplot::draw">
+      <a href="../Cryplot/Draw.html">Draw</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Extension" data-name="cryplot::extension">
+      <a href="../Cryplot/Extension.html">Extension</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Figure" data-name="cryplot::figure">
+      <a href="../Cryplot/Figure.html">Figure</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Fill" data-name="cryplot::fill">
+      <a href="../Cryplot/Fill.html">Fill</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurve" data-name="cryplot::filledcurve">
+      <a href="../Cryplot/FilledCurve.html">FilledCurve</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurveMixin" data-name="cryplot::filledcurvemixin(t)">
+      <a href="../Cryplot/FilledCurveMixin.html">FilledCurveMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillMixin" data-name="cryplot::fillmixin(t)">
+      <a href="../Cryplot/FillMixin.html">FillMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillStyle" data-name="cryplot::fillstyle">
+      <a href="../Cryplot/FillStyle.html">FillStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Font" data-name="cryplot::font">
+      <a href="../Cryplot/Font.html">Font</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FontMixin" data-name="cryplot::fontmixin(t)">
+      <a href="../Cryplot/FontMixin.html">FontMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Frame" data-name="cryplot::frame">
+      <a href="../Cryplot/Frame.html">Frame</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FrameMixin" data-name="cryplot::framemixin(t)">
+      <a href="../Cryplot/FrameMixin.html">FrameMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Grid" data-name="cryplot::grid">
+      <a href="../Cryplot/Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/GridBase" data-name="cryplot::gridbase">
+      <a href="../Cryplot/GridBase.html">GridBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/HistogramStyle" data-name="cryplot::histogramstyle">
+      <a href="../Cryplot/HistogramStyle.html">HistogramStyle</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cryplot/Cryplot/Legend" data-name="cryplot::legend">
+      <a href="../Cryplot/Legend.html">Legend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Line" data-name="cryplot::line">
+      <a href="../Cryplot/Line.html">Line</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/LineMixin" data-name="cryplot::linemixin(t)">
+      <a href="../Cryplot/LineMixin.html">LineMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MajorTics" data-name="cryplot::majortics">
+      <a href="../Cryplot/MajorTics.html">MajorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MinorTics" data-name="cryplot::minortics">
+      <a href="../Cryplot/MinorTics.html">MinorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MultiPlots" data-name="cryplot::multiplots">
+      <a href="../Cryplot/MultiPlots.html">MultiPlots</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Offset" data-name="cryplot::offset">
+      <a href="../Cryplot/Offset.html">Offset</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/OffsetMixin" data-name="cryplot::offsetmixin(t)">
+      <a href="../Cryplot/OffsetMixin.html">OffsetMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Palette" data-name="cryplot::palette">
+      <a href="../Cryplot/Palette.html">Palette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot" data-name="cryplot::plot">
+      <a href="../Cryplot/Plot.html">Plot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot3D" data-name="cryplot::plot3d">
+      <a href="../Cryplot/Plot3D.html">Plot3D</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PlotXD" data-name="cryplot::plotxd">
+      <a href="../Cryplot/PlotXD.html">PlotXD</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Point" data-name="cryplot::point">
+      <a href="../Cryplot/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PointMixin" data-name="cryplot::pointmixin(t)">
+      <a href="../Cryplot/PointMixin.html">PointMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Show" data-name="cryplot::show">
+      <a href="../Cryplot/Show.html">Show</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/ShowMixin" data-name="cryplot::showmixin(t)">
+      <a href="../Cryplot/ShowMixin.html">ShowMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/StringOrFloat" data-name="cryplot::stringorfloat">
+      <a href="../Cryplot/StringOrFloat.html">StringOrFloat</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Strings" data-name="cryplot::strings">
+      <a href="../Cryplot/Strings.html">Strings</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Text" data-name="cryplot::text">
+      <a href="../Cryplot/Text.html">Text</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TextMixin" data-name="cryplot::textmixin(t)">
+      <a href="../Cryplot/TextMixin.html">TextMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Tics" data-name="cryplot::tics">
+      <a href="../Cryplot/Tics.html">Tics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Title" data-name="cryplot::title">
+      <a href="../Cryplot/Title.html">Title</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TitleMixin" data-name="cryplot::titlemixin(t)">
+      <a href="../Cryplot/TitleMixin.html">TitleMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/UnkownPalette" data-name="cryplot::unkownpalette">
+      <a href="../Cryplot/UnkownPalette.html">UnkownPalette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Vec" data-name="cryplot::vec">
+      <a href="../Cryplot/Vec.html">Vec</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    class
+  </span> Cryplot::<wbr>Legend
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../Cryplot/Legend.html">Cryplot::Legend</a></li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Class used to specific options for legend</p>
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../Cryplot/FrameMixin.html">Cryplot::FrameMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</li>
+    
+      <li class="other-type"><a href="../Cryplot/ShowMixin.html">Cryplot::ShowMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</li>
+    
+      <li class="other-type"><a href="../Cryplot/TextMixin.html">Cryplot::TextMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</li>
+    
+      <li class="other-type"><a href="../Cryplot/TitleMixin.html">Cryplot::TitleMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L9" target="_blank">
+        plot/elems/legend.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#new-class-method" class="signature"><strong>.new</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#at_bottom-instance-method" class="signature"><strong>#at_bottom</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its bottom side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_bottom_left-instance-method" class="signature"><strong>#at_bottom_left</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its bottom-left corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_bottom_right-instance-method" class="signature"><strong>#at_bottom_right</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its bottom-right corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_center-instance-method" class="signature"><strong>#at_center</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its center.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_left-instance-method" class="signature"><strong>#at_left</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its left side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_bottom-instance-method" class="signature"><strong>#at_outside_bottom</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its bottom side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_bottom_left-instance-method" class="signature"><strong>#at_outside_bottom_left</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its bottom-left corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_bottom_right-instance-method" class="signature"><strong>#at_outside_bottom_right</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its bottom-right corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_left-instance-method" class="signature"><strong>#at_outside_left</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its left side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_left_bottom-instance-method" class="signature"><strong>#at_outside_left_bottom</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its left-bottom corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_left_top-instance-method" class="signature"><strong>#at_outside_left_top</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its left-top corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_right-instance-method" class="signature"><strong>#at_outside_right</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its right side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_right_bottom-instance-method" class="signature"><strong>#at_outside_right_bottom</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its right-bottom corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_right_top-instance-method" class="signature"><strong>#at_outside_right_top</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its right-top corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_top-instance-method" class="signature"><strong>#at_outside_top</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its top side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_top_left-instance-method" class="signature"><strong>#at_outside_top_left</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its top-left corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_outside_top_right-instance-method" class="signature"><strong>#at_outside_top_right</strong></a>
+        
+          <div class="summary"><p>Place the legend on the outside of the plot at its top-right corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_right-instance-method" class="signature"><strong>#at_right</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its right side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_top-instance-method" class="signature"><strong>#at_top</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its top side.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_top_left-instance-method" class="signature"><strong>#at_top_left</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its top-left corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#at_top_right-instance-method" class="signature"><strong>#at_top_right</strong></a>
+        
+          <div class="summary"><p>Place the legend on the inside of the plot at its top-right corner.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_expand_height_by%28value%3AInt32%29-instance-method" class="signature"><strong>#display_expand_height_by</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the height increment/decrement of the legend frame to either enlarge or reduce its height.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_expand_width_by%28value%3AInt32%29-instance-method" class="signature"><strong>#display_expand_width_by</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the width increment/decrement of the legend frame to either enlarge or reduce its width.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_horizontal-instance-method" class="signature"><strong>#display_horizontal</strong></a>
+        
+          <div class="summary"><p>Set the legend entries to be displayed along the horizontal (in rows).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_horizontal_max_cols%28value%3AInt32%29-instance-method" class="signature"><strong>#display_horizontal_max_cols</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the number of columns that trigger a new row to be created in the legend (when using horizontal display).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_justify_left-instance-method" class="signature"><strong>#display_justify_left</strong></a>
+        
+          <div class="summary"><p>Set the legend labels to be left justified.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_justify_right-instance-method" class="signature"><strong>#display_justify_right</strong></a>
+        
+          <div class="summary"><p>Set the legend labels to be right justified.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_labels_after_symbols-instance-method" class="signature"><strong>#display_labels_after_symbols</strong></a>
+        
+          <div class="summary"><p>Set the labels in the legend entries to appear after their corresponding symbols (on the right).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_labels_before_symbols-instance-method" class="signature"><strong>#display_labels_before_symbols</strong></a>
+        
+          <div class="summary"><p>Set the labels in the legend entries to appear before their corresponding symbols (on the left).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_spacing%28value%3AInt32%29-instance-method" class="signature"><strong>#display_spacing</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the spacing between the titles in the legend.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_start_from_first-instance-method" class="signature"><strong>#display_start_from_first</strong></a>
+        
+          <div class="summary"><p>Set the legend entries to be displayed in the order from first to last.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_start_from_last-instance-method" class="signature"><strong>#display_start_from_last</strong></a>
+        
+          <div class="summary"><p>Set the legend entries to be displayed in the order from last to first.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_symbol_length%28value%3AInt32%29-instance-method" class="signature"><strong>#display_symbol_length</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the length of the samples used to generate the symbols in the legend entries.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_vertical-instance-method" class="signature"><strong>#display_vertical</strong></a>
+        
+          <div class="summary"><p>Set the legend entries to be displayed along the vertical (in columns).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#display_vertical_max_rows%28value%3AInt32%29-instance-method" class="signature"><strong>#display_vertical_max_rows</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the number of rows that trigger a new column to be created in the legend (when using vertical display).</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#opaque-instance-method" class="signature"><strong>#opaque</strong></a>
+        
+          <div class="summary"><p>Set the background of the legend box to be opaque.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repr%3AString-instance-method" class="signature"><strong>#repr</strong> : String</a>
+        
+          <div class="summary"><p>returns a string representation of object of some class</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#title_center-instance-method" class="signature"><strong>#title_center</strong></a>
+        
+          <div class="summary"><p>Place the legend title on the center.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#title_left-instance-method" class="signature"><strong>#title_left</strong></a>
+        
+          <div class="summary"><p>Place the legend title on the left.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#title_right-instance-method" class="signature"><strong>#title_right</strong></a>
+        
+          <div class="summary"><p>Place the legend title on the right.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#to_s%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#to_s</strong>(io : IO) : Nil</a>
+        
+          <div class="summary"><p>Appends a short String representation of this object which includes its class name and its object address.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#transparent-instance-method" class="signature"><strong>#transparent</strong></a>
+        
+          <div class="summary"><p>Set the background of the legend box to be transparent.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/FrameMixin.html">Cryplot::FrameMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/FrameMixin.html#frame_dash_type%28value%3AInt32%29-instance-method" class="tooltip">
+      <span>frame_dash_type(value : Int32)</span>
+    frame_dash_type</a>, 
+    
+  
+    <a href="../Cryplot/FrameMixin.html#frame_hide-instance-method" class="tooltip">
+      <span>frame_hide</span>
+    frame_hide</a>, 
+    
+  
+    <a href="../Cryplot/FrameMixin.html#frame_line_color%28value%3AString%29-instance-method" class="tooltip">
+      <span>frame_line_color(value : String)</span>
+    frame_line_color</a>, 
+    
+  
+    <a href="../Cryplot/FrameMixin.html#frame_line_style%28value%3AInt32%29-instance-method" class="tooltip">
+      <span>frame_line_style(value : Int32)</span>
+    frame_line_style</a>, 
+    
+  
+    <a href="../Cryplot/FrameMixin.html#frame_line_type%28value%3AInt32%29-instance-method" class="tooltip">
+      <span>frame_line_type(value : Int32)</span>
+    frame_line_type</a>, 
+    
+  
+    <a href="../Cryplot/FrameMixin.html#frame_line_width%28value%3AInt32%29-instance-method" class="tooltip">
+      <span>frame_line_width(value : Int32)</span>
+    frame_line_width</a>, 
+    
+  
+    <a href="../Cryplot/FrameMixin.html#frame_repr-instance-method" class="tooltip">
+      <span>frame_repr</span>
+    frame_repr</a>, 
+    
+  
+    <a href="../Cryplot/FrameMixin.html#frame_show%28value%3Dtrue%29-instance-method" class="tooltip">
+      <span>frame_show(value = <span class="n">true</span>)</span>
+    frame_show</a>
+    
+  
+
+
+      
+
+  <h3>Constructor methods inherited from module <code><a href="../Cryplot/FrameMixin.html">Cryplot::FrameMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/FrameMixin.html#new-class-method" class="tooltip">
+      <span>new</span>
+    new</a>
+    
+  
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/TitleMixin.html">Cryplot::TitleMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/TitleMixin.html#title%28text%3AString%29-instance-method" class="tooltip">
+      <span>title(text : String)</span>
+    title</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_font_name%28name%3AString%29-instance-method" class="tooltip">
+      <span>title_font_name(name : String)</span>
+    title_font_name</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_font_size%28size%3AInt32%29-instance-method" class="tooltip">
+      <span>title_font_size(size : Int32)</span>
+    title_font_size</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_repr-instance-method" class="tooltip">
+      <span>title_repr</span>
+    title_repr</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_shift_along_graph_x%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>title_shift_along_graph_x(val : Number)</span>
+    title_shift_along_graph_x</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_shift_along_graph_y%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>title_shift_along_graph_y(val : Number)</span>
+    title_shift_along_graph_y</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_shift_along_screen_x%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>title_shift_along_screen_x(val : Number)</span>
+    title_shift_along_screen_x</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_shift_along_screen_y%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>title_shift_along_screen_y(val : Number)</span>
+    title_shift_along_screen_y</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_shift_along_x%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>title_shift_along_x(val : Number)</span>
+    title_shift_along_x</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_shift_along_y%28val%3ANumber%29-instance-method" class="tooltip">
+      <span>title_shift_along_y(val : Number)</span>
+    title_shift_along_y</a>, 
+    
+  
+    <a href="../Cryplot/TitleMixin.html#title_text_color%28color%3AString%29-instance-method" class="tooltip">
+      <span>title_text_color(color : String)</span>
+    title_text_color</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/ShowMixin.html">Cryplot::ShowMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/ShowMixin.html#hidden%3F%3ABool-instance-method" class="tooltip">
+      <span>hidden? : Bool</span>
+    hidden?</a>, 
+    
+  
+    <a href="../Cryplot/ShowMixin.html#hide-instance-method" class="tooltip">
+      <span>hide</span>
+    hide</a>, 
+    
+  
+    <a href="../Cryplot/ShowMixin.html#show%28value%3Dtrue%29-instance-method" class="tooltip">
+      <span>show(value = <span class="n">true</span>)</span>
+    show</a>, 
+    
+  
+    <a href="../Cryplot/ShowMixin.html#show_repr-instance-method" class="tooltip">
+      <span>show_repr</span>
+    show_repr</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/TextMixin.html">Cryplot::TextMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/TextMixin.html#enhanced%28value%3ABool%29%3AT-instance-method" class="tooltip">
+      <span>enhanced(value : Bool) : T</span>
+    enhanced</a>, 
+    
+  
+    <a href="../Cryplot/TextMixin.html#text_color%28color%3AString%29%3AT-instance-method" class="tooltip">
+      <span>text_color(color : String) : T</span>
+    text_color</a>, 
+    
+  
+    <a href="../Cryplot/TextMixin.html#text_repr%3AString-instance-method" class="tooltip">
+      <span>text_repr : String</span>
+    text_repr</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/FontMixin.html">Cryplot::FontMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/FontMixin.html#font_name%28name%3AString%29%3AT-instance-method" class="tooltip">
+      <span>font_name(name : String) : T</span>
+    font_name</a>, 
+    
+  
+    <a href="../Cryplot/FontMixin.html#font_repr%3AString-instance-method" class="tooltip">
+      <span>font_repr : String</span>
+    font_repr</a>, 
+    
+  
+    <a href="../Cryplot/FontMixin.html#font_size%28size%3AInt32%29%3AT-instance-method" class="tooltip">
+      <span>font_size(size : Int32) : T</span>
+    font_size</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)</code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+  
+    <div class="entry-detail" id="new-class-method">
+      <div class="signature">
+        
+        def self.<strong>new</strong>
+
+        <a class="method-permalink" href="#new-class-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="at_bottom-instance-method">
+      <div class="signature">
+        
+        def <strong>at_bottom</strong>
+
+        <a class="method-permalink" href="#at_bottom-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its bottom side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_bottom_left-instance-method">
+      <div class="signature">
+        
+        def <strong>at_bottom_left</strong>
+
+        <a class="method-permalink" href="#at_bottom_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its bottom-left corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L113" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_bottom_right-instance-method">
+      <div class="signature">
+        
+        def <strong>at_bottom_right</strong>
+
+        <a class="method-permalink" href="#at_bottom_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its bottom-right corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L119" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_center-instance-method">
+      <div class="signature">
+        
+        def <strong>at_center</strong>
+
+        <a class="method-permalink" href="#at_center-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its center.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L83" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_left-instance-method">
+      <div class="signature">
+        
+        def <strong>at_left</strong>
+
+        <a class="method-permalink" href="#at_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its left side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L71" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_bottom-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_bottom</strong>
+
+        <a class="method-permalink" href="#at_outside_bottom-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its bottom side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L161" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_bottom_left-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_bottom_left</strong>
+
+        <a class="method-permalink" href="#at_outside_bottom_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its bottom-left corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L167" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_bottom_right-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_bottom_right</strong>
+
+        <a class="method-permalink" href="#at_outside_bottom_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its bottom-right corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L173" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_left-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_left</strong>
+
+        <a class="method-permalink" href="#at_outside_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its left side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L125" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_left_bottom-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_left_bottom</strong>
+
+        <a class="method-permalink" href="#at_outside_left_bottom-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its left-bottom corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L137" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_left_top-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_left_top</strong>
+
+        <a class="method-permalink" href="#at_outside_left_top-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its left-top corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L131" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_right-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_right</strong>
+
+        <a class="method-permalink" href="#at_outside_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its right side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L143" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_right_bottom-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_right_bottom</strong>
+
+        <a class="method-permalink" href="#at_outside_right_bottom-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its right-bottom corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L155" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_right_top-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_right_top</strong>
+
+        <a class="method-permalink" href="#at_outside_right_top-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its right-top corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L149" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_top-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_top</strong>
+
+        <a class="method-permalink" href="#at_outside_top-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its top side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L179" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_top_left-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_top_left</strong>
+
+        <a class="method-permalink" href="#at_outside_top_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its top-left corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L185" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_outside_top_right-instance-method">
+      <div class="signature">
+        
+        def <strong>at_outside_top_right</strong>
+
+        <a class="method-permalink" href="#at_outside_top_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the outside of the plot at its top-right corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L191" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_right-instance-method">
+      <div class="signature">
+        
+        def <strong>at_right</strong>
+
+        <a class="method-permalink" href="#at_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its right side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_top-instance-method">
+      <div class="signature">
+        
+        def <strong>at_top</strong>
+
+        <a class="method-permalink" href="#at_top-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its top side.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L89" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_top_left-instance-method">
+      <div class="signature">
+        
+        def <strong>at_top_left</strong>
+
+        <a class="method-permalink" href="#at_top_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its top-left corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L95" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="at_top_right-instance-method">
+      <div class="signature">
+        
+        def <strong>at_top_right</strong>
+
+        <a class="method-permalink" href="#at_top_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend on the inside of the plot at its top-right corner.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L101" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_expand_height_by(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>display_expand_height_by</strong>(value : Int32)
+
+        <a class="method-permalink" href="#display_expand_height_by%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the height increment/decrement of the legend frame to either enlarge or reduce its height.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L287" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_expand_width_by(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>display_expand_width_by</strong>(value : Int32)
+
+        <a class="method-permalink" href="#display_expand_width_by%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the width increment/decrement of the legend frame to either enlarge or reduce its width.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L281" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_horizontal-instance-method">
+      <div class="signature">
+        
+        def <strong>display_horizontal</strong>
+
+        <a class="method-permalink" href="#display_horizontal-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the legend entries to be displayed along the horizontal (in rows).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L227" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_horizontal_max_cols(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>display_horizontal_max_cols</strong>(value : Int32)
+
+        <a class="method-permalink" href="#display_horizontal_max_cols%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the number of columns that trigger a new row to be created in the legend (when using horizontal display).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L233" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_justify_left-instance-method">
+      <div class="signature">
+        
+        def <strong>display_justify_left</strong>
+
+        <a class="method-permalink" href="#display_justify_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the legend labels to be left justified.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L251" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_justify_right-instance-method">
+      <div class="signature">
+        
+        def <strong>display_justify_right</strong>
+
+        <a class="method-permalink" href="#display_justify_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the legend labels to be right justified.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L257" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_labels_after_symbols-instance-method">
+      <div class="signature">
+        
+        def <strong>display_labels_after_symbols</strong>
+
+        <a class="method-permalink" href="#display_labels_after_symbols-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the labels in the legend entries to appear after their corresponding symbols (on the right).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L245" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_labels_before_symbols-instance-method">
+      <div class="signature">
+        
+        def <strong>display_labels_before_symbols</strong>
+
+        <a class="method-permalink" href="#display_labels_before_symbols-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the labels in the legend entries to appear before their corresponding symbols (on the left).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L239" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_spacing(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>display_spacing</strong>(value : Int32)
+
+        <a class="method-permalink" href="#display_spacing%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the spacing between the titles in the legend.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L275" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_start_from_first-instance-method">
+      <div class="signature">
+        
+        def <strong>display_start_from_first</strong>
+
+        <a class="method-permalink" href="#display_start_from_first-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the legend entries to be displayed in the order from first to last.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L263" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_start_from_last-instance-method">
+      <div class="signature">
+        
+        def <strong>display_start_from_last</strong>
+
+        <a class="method-permalink" href="#display_start_from_last-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the legend entries to be displayed in the order from last to first.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L269" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_symbol_length(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>display_symbol_length</strong>(value : Int32)
+
+        <a class="method-permalink" href="#display_symbol_length%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the length of the samples used to generate the symbols in the legend entries.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L293" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_vertical-instance-method">
+      <div class="signature">
+        
+        def <strong>display_vertical</strong>
+
+        <a class="method-permalink" href="#display_vertical-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the legend entries to be displayed along the vertical (in columns).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L215" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="display_vertical_max_rows(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>display_vertical_max_rows</strong>(value : Int32)
+
+        <a class="method-permalink" href="#display_vertical_max_rows%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the number of rows that trigger a new column to be created in the legend (when using vertical display).</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L221" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="opaque-instance-method">
+      <div class="signature">
+        
+        def <strong>opaque</strong>
+
+        <a class="method-permalink" href="#opaque-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the background of the legend box to be opaque.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L59" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repr:String-instance-method">
+      <div class="signature">
+        
+        def <strong>repr</strong> : String
+
+        <a class="method-permalink" href="#repr%3AString-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from module <a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin</a>(<a href="../Cryplot/Legend.html">Cryplot::Legend</a>)
+            </div>
+          
+          <p>returns a string representation of object of some class</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L298" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="title_center-instance-method">
+      <div class="signature">
+        
+        def <strong>title_center</strong>
+
+        <a class="method-permalink" href="#title_center-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend title on the center.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L203" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="title_left-instance-method">
+      <div class="signature">
+        
+        def <strong>title_left</strong>
+
+        <a class="method-permalink" href="#title_left-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend title on the left.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L197" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="title_right-instance-method">
+      <div class="signature">
+        
+        def <strong>title_right</strong>
+
+        <a class="method-permalink" href="#title_right-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Place the legend title on the right.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L209" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="to_s(io:IO):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>to_s</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#to_s%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+            <div class="doc-inherited">
+              Description copied from class Reference
+            </div>
+          
+          <p>Appends a short String representation of this object
+which includes its class name and its object address.</p>
+<pre><code class="language-crystal"><span class="k">class</span> <span class="t">Person</span>
+  <span class="k">def</span> <span class="m">initialize</span>(@name : <span class="t">String</span>, @age : <span class="t">Int32</span>)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="t">Person</span>.new(<span class="s">&quot;John&quot;</span>, <span class="n">32</span>).to_s <span class="c"># =&gt; #&lt;Person:0x10a199f20&gt;</span></code></pre>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L322" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="transparent-instance-method">
+      <div class="signature">
+        
+        def <strong>transparent</strong>
+
+        <a class="method-permalink" href="#transparent-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the background of the legend box to be transparent.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/legend.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

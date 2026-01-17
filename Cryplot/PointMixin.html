@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="cryplot">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="cryplot">
+  <title>Cryplot::PointMixin(T) - cryplot main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          cryplot
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="cryplot/Cryplot" data-name="cryplot">
+      <a href="../Cryplot.html">Cryplot</a>
+      
+        <ul>
+  
+  <li class=" " data-id="cryplot/Cryplot/AxisLabel" data-name="cryplot::axislabel">
+      <a href="../Cryplot/AxisLabel.html">AxisLabel</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseMixin" data-name="cryplot::basemixin(t)">
+      <a href="../Cryplot/BaseMixin.html">BaseMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BasePlot" data-name="cryplot::baseplot">
+      <a href="../Cryplot/BasePlot.html">BasePlot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/BaseTics" data-name="cryplot::basetics(t)">
+      <a href="../Cryplot/BaseTics.html">BaseTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Border" data-name="cryplot::border">
+      <a href="../Cryplot/Border.html">Border</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Depth" data-name="cryplot::depth">
+      <a href="../Cryplot/Depth.html">Depth</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/DepthMixin" data-name="cryplot::depthmixin(t)">
+      <a href="../Cryplot/DepthMixin.html">DepthMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Draw" data-name="cryplot::draw">
+      <a href="../Cryplot/Draw.html">Draw</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Extension" data-name="cryplot::extension">
+      <a href="../Cryplot/Extension.html">Extension</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Figure" data-name="cryplot::figure">
+      <a href="../Cryplot/Figure.html">Figure</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Fill" data-name="cryplot::fill">
+      <a href="../Cryplot/Fill.html">Fill</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurve" data-name="cryplot::filledcurve">
+      <a href="../Cryplot/FilledCurve.html">FilledCurve</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FilledCurveMixin" data-name="cryplot::filledcurvemixin(t)">
+      <a href="../Cryplot/FilledCurveMixin.html">FilledCurveMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillMixin" data-name="cryplot::fillmixin(t)">
+      <a href="../Cryplot/FillMixin.html">FillMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FillStyle" data-name="cryplot::fillstyle">
+      <a href="../Cryplot/FillStyle.html">FillStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Font" data-name="cryplot::font">
+      <a href="../Cryplot/Font.html">Font</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FontMixin" data-name="cryplot::fontmixin(t)">
+      <a href="../Cryplot/FontMixin.html">FontMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Frame" data-name="cryplot::frame">
+      <a href="../Cryplot/Frame.html">Frame</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/FrameMixin" data-name="cryplot::framemixin(t)">
+      <a href="../Cryplot/FrameMixin.html">FrameMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Grid" data-name="cryplot::grid">
+      <a href="../Cryplot/Grid.html">Grid</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/GridBase" data-name="cryplot::gridbase">
+      <a href="../Cryplot/GridBase.html">GridBase</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/HistogramStyle" data-name="cryplot::histogramstyle">
+      <a href="../Cryplot/HistogramStyle.html">HistogramStyle</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Legend" data-name="cryplot::legend">
+      <a href="../Cryplot/Legend.html">Legend</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Line" data-name="cryplot::line">
+      <a href="../Cryplot/Line.html">Line</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/LineMixin" data-name="cryplot::linemixin(t)">
+      <a href="../Cryplot/LineMixin.html">LineMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MajorTics" data-name="cryplot::majortics">
+      <a href="../Cryplot/MajorTics.html">MajorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MinorTics" data-name="cryplot::minortics">
+      <a href="../Cryplot/MinorTics.html">MinorTics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/MultiPlots" data-name="cryplot::multiplots">
+      <a href="../Cryplot/MultiPlots.html">MultiPlots</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Offset" data-name="cryplot::offset">
+      <a href="../Cryplot/Offset.html">Offset</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/OffsetMixin" data-name="cryplot::offsetmixin(t)">
+      <a href="../Cryplot/OffsetMixin.html">OffsetMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Palette" data-name="cryplot::palette">
+      <a href="../Cryplot/Palette.html">Palette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot" data-name="cryplot::plot">
+      <a href="../Cryplot/Plot.html">Plot</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Plot3D" data-name="cryplot::plot3d">
+      <a href="../Cryplot/Plot3D.html">Plot3D</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/PlotXD" data-name="cryplot::plotxd">
+      <a href="../Cryplot/PlotXD.html">PlotXD</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Point" data-name="cryplot::point">
+      <a href="../Cryplot/Point.html">Point</a>
+      
+    </li>
+  
+  <li class=" current" data-id="cryplot/Cryplot/PointMixin" data-name="cryplot::pointmixin(t)">
+      <a href="../Cryplot/PointMixin.html">PointMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Show" data-name="cryplot::show">
+      <a href="../Cryplot/Show.html">Show</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/ShowMixin" data-name="cryplot::showmixin(t)">
+      <a href="../Cryplot/ShowMixin.html">ShowMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/StringOrFloat" data-name="cryplot::stringorfloat">
+      <a href="../Cryplot/StringOrFloat.html">StringOrFloat</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Strings" data-name="cryplot::strings">
+      <a href="../Cryplot/Strings.html">Strings</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Text" data-name="cryplot::text">
+      <a href="../Cryplot/Text.html">Text</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TextMixin" data-name="cryplot::textmixin(t)">
+      <a href="../Cryplot/TextMixin.html">TextMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Tics" data-name="cryplot::tics">
+      <a href="../Cryplot/Tics.html">Tics</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Title" data-name="cryplot::title">
+      <a href="../Cryplot/Title.html">Title</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/TitleMixin" data-name="cryplot::titlemixin(t)">
+      <a href="../Cryplot/TitleMixin.html">TitleMixin</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/UnkownPalette" data-name="cryplot::unkownpalette">
+      <a href="../Cryplot/UnkownPalette.html">UnkownPalette</a>
+      
+    </li>
+  
+  <li class=" " data-id="cryplot/Cryplot/Vec" data-name="cryplot::vec">
+      <a href="../Cryplot/Vec.html">Vec</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> Cryplot::<wbr>PointMixin(T)
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>mixin used to attach point options to a type</p>
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin(T)</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+  <h2>
+    <a id="direct-including-types" class="anchor" href="#direct-including-types">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct including types
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../Cryplot/Draw.html">Cryplot::Draw</a></li>
+    
+      <li class="other-type"><a href="../Cryplot/Point.html">Cryplot::Point</a></li>
+    
+  </ul>
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/point.cr#L5" target="_blank">
+        plot/elems/point.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#point_repr-instance-method" class="signature"><strong>#point_repr</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#point_size%28value%3AInt32%29-instance-method" class="signature"><strong>#point_size</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the point size of the underlying plot object.</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#point_type%28value%3AInt32%29-instance-method" class="signature"><strong>#point_type</strong>(value : Int32)</a>
+        
+          <div class="summary"><p>Set the point type of the underlying plot object.</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="../Cryplot/BaseMixin.html">Cryplot::BaseMixin(T)</a></code></h3>
+  
+  
+    <a href="../Cryplot/BaseMixin.html#derived%3AT-instance-method" class="tooltip">
+      <span>derived : T</span>
+    derived</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#repr%3AString-instance-method" class="tooltip">
+      <span>repr : String</span>
+    repr</a>, 
+    
+  
+    <a href="../Cryplot/BaseMixin.html#to_s%28io%3AIO%29%3ANil-instance-method" class="tooltip">
+      <span>to_s(io : IO) : Nil</span>
+    to_s</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="point_repr-instance-method">
+      <div class="signature">
+        
+        def <strong>point_repr</strong>
+
+        <a class="method-permalink" href="#point_repr-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/point.cr#L24" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="point_size(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>point_size</strong>(value : Int32)
+
+        <a class="method-permalink" href="#point_size%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the point size of the underlying plot object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/point.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="point_type(value:Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>point_type</strong>(value : Int32)
+
+        <a class="method-permalink" href="#point_type%28value%3AInt32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set the point type of the underlying plot object.</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/naqvis/cryplot/blob/6518fb1417f020ac381e2deba670df49af2c84ca/src/plot/elems/point.cr#L13" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>
