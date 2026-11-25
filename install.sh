@@ -2,7 +2,7 @@
 
 set -eu
 
-cd $(dirname $0)
+cd "$(dirname "$0")"
 
 if [ -d ".git" ]
 then
